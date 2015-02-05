@@ -817,20 +817,28 @@ uint32_t PointToPointNetDevice::Forwarding_FatTree(Ptr<Packet> packet,uint32_t i
 		/***********************************************************************
 		 *****     For all the level 1 (aggregate) switches          ***********
 		 ***********************************************************************/
-		if (1==nodeId.id_level && ! isForwarding){ //keep backtracking
-			/*
-			 * We don't consider efficient Fat-Tree at this stage
-			 * */
+/*		if (1==nodeId.id_level && ! isForwarding){ //keep backtracking
+
 			oif = NormalForwarding_FatTree(nodeId, srcId, turningId, iif);
 			return oif;
 		}
-		if (1==nodeId.id_level && iif>Port_num/2){// return this packet
-			assert(!IsNotFailure_FatTree(nodeId,oif));
-			oif=iif;
-			return oif;
+*/
+		if (1==nodeId.id_level && iif>Port_num/2){
+			if (!isForwarding){//keep backtracking.
+				/*
+				 * We don't consider efficient Fat-Tree at this stage
+				 * */
+				oif = NormalForwarding_FatTree(nodeId, srcId, turningId, iif);
+				return oif;
+			}
+			else{// return this packet
+				assert(!IsNotFailure_FatTree(nodeId,oif)); // error must be incurred by link failure
+				oif=iif;
+				return oif;
+			}
 		}
-		if (1==nodeId.id_level && iif<=Port_num/2){
-			assert(!IsNotFailure_FatTree(nodeId,oif));
+		if (1==nodeId.id_level && iif<=Port_num/2){//choose another upstream path
+			assert(!IsNotFailure_FatTree(nodeId,oif)); // error must be incurred by link failure
 			oif=FindRecoveryPort(oif);
 			UpdateTurningSW(packet, oif);
 			return oif;

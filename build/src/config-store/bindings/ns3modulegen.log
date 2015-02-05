@@ -1,0 +1,13 @@
+>>>>>>>>>>>>>>>> []
+/home/chris/git/NS3-simulation/ns-3.18/src/config-store/bindings/modulegen__gcc_ILP32.py:336: Warning: exception TypeLookupError(['ns3::AttributeConstructionList &'],) in wrapper protected: retval? ???::ConstructSelf (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/config-store/bindings/modulegen__gcc_ILP32.py:386: Warning: exception TypeLookupError(['ns3::Callback< ns3::ObjectBase *, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: retval? ???::GetConstructor (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/config-store/bindings/modulegen__gcc_ILP32.py:465: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::LookupByHashFailSafe (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/config-store/bindings/modulegen__gcc_ILP32.py:924: Warning: exception TypeLookupError(['ns3::Hash::Hash32Function_ptr'],) in wrapper <pybindgen.cppmethod.CppConstructor object at 0xb6dcebec>
+  cls.add_constructor([param('ns3::Hash::Hash32Function_ptr', 'hp')])
+/home/chris/git/NS3-simulation/ns-3.18/src/config-store/bindings/modulegen__gcc_ILP32.py:941: Warning: exception TypeLookupError(['ns3::Hash::Hash64Function_ptr'],) in wrapper <pybindgen.cppmethod.CppConstructor object at 0xb6dd2dec>
+  cls.add_constructor([param('ns3::Hash::Hash64Function_ptr', 'hp')])
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::FileConfig cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::FileConfig'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))

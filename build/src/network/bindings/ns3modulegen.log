@@ -1,0 +1,458 @@
+>>>>>>>>>>>>>>>> [['bool', 'ns3::Ptr<ns3::NetDevice>', 'ns3::Ptr<ns3::Packet const>', 'unsigned short', 'ns3::Address const&', 'ns3::Address const&', 'ns3::NetDevice::PacketType', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['bool', 'ns3::Ptr<ns3::NetDevice>', 'ns3::Ptr<ns3::Packet const>', 'unsigned short', 'ns3::Address const&', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['void', 'ns3::Ptr<ns3::Socket>', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['void', 'ns3::Ptr<ns3::Socket>', 'unsigned int', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['void', 'ns3::Ptr<ns3::Socket>', 'ns3::Address const&', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['bool', 'ns3::Ptr<ns3::Socket>', 'ns3::Address const&', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['void', 'ns3::Ptr<ns3::NetDevice>', 'ns3::Ptr<ns3::Packet const>', 'unsigned short', 'ns3::Address const&', 'ns3::Address const&', 'ns3::NetDevice::PacketType', 'ns3::empty', 'ns3::empty', 'ns3::empty']]
+***** registering callback handler: 'ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< void, ns3::Ptr< ns3::Socket >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< void, ns3::Ptr< ns3::Socket >, unsigned int, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< void, ns3::Ptr< ns3::Socket >, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< bool, ns3::Ptr< ns3::Socket >, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< void, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >'
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:758: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x8909b4c>
+  cls.add_constructor([param('uint8_t', 'type'), param('uint8_t const *', 'buffer'), param('uint8_t', 'len')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:769: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyAllFrom (params?);
+  [param('uint8_t const *', 'buffer'), param('uint8_t', 'len')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:774: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyAllTo (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:778: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyFrom (params?);
+  [param('uint8_t const *', 'buffer'), param('uint8_t', 'len')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:783: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyTo (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:845: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< ns3::Ptr< ns3::Application > const, std::vector< ns3::Ptr< ns3::Application > > >'],) in wrapper public: retval? ???::Begin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:850: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< ns3::Ptr< ns3::Application > const, std::vector< ns3::Ptr< ns3::Application > > >'],) in wrapper public: retval? ???::End (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:1035: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::AttributeConstructionList::Item >'],) in wrapper public: retval? ???::Begin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:1040: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::AttributeConstructionList::Item >'],) in wrapper public: retval? ???::End (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:1091: Warning: exception TypeLookupError(['std::ostream *'],) in wrapper public: retval? ???::CopyData (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:1096: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyData (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:1110: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Deserialize (params?);
+  [param('uint8_t const *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:1140: Warning: exception TypeLookupError(['uint8_t *'],) in wrapper public: retval? ???::PeekData (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:1153: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Serialize (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:1208: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Read (params?);
+  [param('uint8_t *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:1252: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Write (params?);
+  [param('uint8_t const *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:1444: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< ns3::Ptr< ns3::Channel > const, std::vector< ns3::Ptr< ns3::Channel > > >'],) in wrapper public: retval? ???::Begin (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:1449: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< ns3::Ptr< ns3::Channel > const, std::vector< ns3::Ptr< ns3::Channel > > >'],) in wrapper public: retval? ???::End (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:1561: Warning: exception TypeLookupError(['ns3::Ptr< ns3::EventImpl > &'],) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x8a9c0ec>
+  cls.add_constructor([param('ns3::Ptr< ns3::EventImpl > const &', 'impl'), param('uint64_t', 'ts'), param('uint32_t', 'context'), param('uint32_t', 'uid')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:1595: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::PeekEventImpl (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:1740: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Deserialize (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:1805: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:1810: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Serialize (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:1877: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:1894: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x8b5802c>
+  cls.add_constructor([param('uint8_t *', 'address')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:1912: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Deserialize (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:1937: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::GetBytes (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2066: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2071: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Serialize (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2079: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Set (params?);
+  [param('uint8_t *', 'address')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2089: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x8bb5fcc>
+  cls.add_constructor([param('uint8_t *', 'prefix')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2102: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::GetBytes (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2137: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2164: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyFrom (params?);
+  [param('uint8_t const *', 'buffer')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2169: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyTo (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2201: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyFrom (params?);
+  [param('uint8_t const *', 'buffer')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2206: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyTo (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2273: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyFrom (params?);
+  [param('uint8_t const *', 'buffer')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2278: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyTo (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2313: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< ns3::Ptr< ns3::NetDevice > const, std::vector< ns3::Ptr< ns3::NetDevice > > >'],) in wrapper public: retval? ???::Begin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2318: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< ns3::Ptr< ns3::NetDevice > const, std::vector< ns3::Ptr< ns3::NetDevice > > >'],) in wrapper public: retval? ???::End (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2364: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< ns3::Ptr< ns3::Node > const, std::vector< ns3::Ptr< ns3::Node > > >'],) in wrapper public: retval? ???::Begin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2377: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< ns3::Ptr< ns3::Node > const, std::vector< ns3::Ptr< ns3::Node > > >'],) in wrapper public: retval? ???::End (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2409: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< ns3::Ptr< ns3::Node > const, std::vector< ns3::Ptr< ns3::Node > > >'],) in wrapper public: retval? ???::Begin (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2414: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< ns3::Ptr< ns3::Node > const, std::vector< ns3::Ptr< ns3::Node > > >'],) in wrapper public: retval? ???::End (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2497: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::Delete (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2570: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Deserialize (params?);
+  [param('uint8_t const *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2611: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Serialize (params?) const;
+  is_const=True)
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception TypeLookupError(['uint8_t [ 20 ]'],) in wrapper None
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper None
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2817: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbAddressTlv > >'],) in wrapper public: retval? ???::Begin (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2822: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::Ptr< ns3::PbbAddressTlv > >'],) in wrapper public: retval? ???::Begin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2839: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbAddressTlv > >'],) in wrapper public: retval? ???::End (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2844: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::Ptr< ns3::PbbAddressTlv > >'],) in wrapper public: retval? ???::End (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2848: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbAddressTlv > >'],) in wrapper public: retval? ???::Erase (params?);
+  [param('std::_List_iterator< ns3::Ptr< ns3::PbbAddressTlv > >', 'position')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2852: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbAddressTlv > >'],) in wrapper public: retval? ???::Erase (params?);
+  [param('std::_List_iterator< ns3::Ptr< ns3::PbbAddressTlv > >', 'first'), param('std::_List_iterator< ns3::Ptr< ns3::PbbAddressTlv > >', 'last')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2866: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbAddressTlv > >'],) in wrapper public: retval? ???::Insert (params?);
+  [param('std::_List_iterator< ns3::Ptr< ns3::PbbAddressTlv > >', 'position'), param('ns3::Ptr< ns3::PbbAddressTlv > const', 'tlv')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2879: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2884: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2920: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbTlv > >'],) in wrapper public: retval? ???::Begin (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2925: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::Ptr< ns3::PbbTlv > >'],) in wrapper public: retval? ???::Begin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2942: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbTlv > >'],) in wrapper public: retval? ???::End (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2947: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::Ptr< ns3::PbbTlv > >'],) in wrapper public: retval? ???::End (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2951: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbTlv > >'],) in wrapper public: retval? ???::Erase (params?);
+  [param('std::_List_iterator< ns3::Ptr< ns3::PbbTlv > >', 'position')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2955: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbTlv > >'],) in wrapper public: retval? ???::Erase (params?);
+  [param('std::_List_iterator< ns3::Ptr< ns3::PbbTlv > >', 'first'), param('std::_List_iterator< ns3::Ptr< ns3::PbbTlv > >', 'last')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2969: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbTlv > >'],) in wrapper public: retval? ???::Insert (params?);
+  [param('std::_List_iterator< ns3::Ptr< ns3::PbbTlv > >', 'position'), param('ns3::Ptr< ns3::PbbTlv > const', 'tlv')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2982: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:2987: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:3023: Warning: exception TypeLookupError(['uint32_t &'],) in wrapper public: retval? ???::Diff (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:3077: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Read (params?);
+  [param('uint8_t * const', 'data'), param('uint32_t', 'maxBytes'), param('uint32_t &', 'tsSec'), param('uint32_t &', 'tsUsec'), param('uint32_t &', 'inclLen'), param('uint32_t &', 'origLen'), param('uint32_t &', 'readLen')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:3081: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Write (params?);
+  [param('uint32_t', 'tsSec'), param('uint32_t', 'tsUsec'), param('uint8_t const * const', 'data'), param('uint32_t', 'totalLen')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:3191: Warning: exception TypeLookupError(['short unsigned int'],) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x8db222c>
+  cls.add_constructor([param('short unsigned int', 'value')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:3240: Warning: exception TypeLookupError(['ns3::Ptr< ns3::SimulatorImpl >', 'ns3::SimulatorImpl *'],) in wrapper public: retval? ???::GetImplementation (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:3275: Warning: exception TypeLookupError(['ns3::Ptr< ns3::SimulatorImpl >', 'ns3::SimulatorImpl *'],) in wrapper public: retval? ???::SetImplementation (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:3394: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:3406: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x8e2710c>
+  cls.add_constructor([param('uint8_t *', 'start'), param('uint8_t *', 'end')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:3414: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Read (params?);
+  [param('uint8_t *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:3442: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Write (params?);
+  [param('uint8_t const *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:3507: Warning: exception TypeLookupError(['ns3::Callback< ns3::ObjectBase *, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: retval? ???::GetConstructor (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:3586: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::LookupByHashFailSafe (params?);
+  is_static=True)
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception TypeLookupError(['short unsigned int'],) in wrapper None
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:3787: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:3824: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:3877: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:3914: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:3955: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:4046: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::Ptr< ns3::Packet > >'],) in wrapper public: retval? ???::Begin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:4056: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::Ptr< ns3::Packet > >'],) in wrapper public: retval? ???::End (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:4123: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:4184: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Write (params?);
+  [param('ns3::Time', 't'), param('uint8_t const *', 'buffer'), param('uint32_t', 'length')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:4367: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:4439: Warning: exception TypeLookupError(['ns3::RngStream *'],) in wrapper protected: retval? ???::Peek (params?) const;
+  is_const=True, visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:4864: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Recv (params?);
+  [param('uint8_t *', 'buf'), param('uint32_t', 'size'), param('uint32_t', 'flags')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:4877: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::RecvFrom (params?);
+  [param('uint8_t *', 'buf'), param('uint32_t', 'size'), param('uint32_t', 'flags'), param('ns3::Address &', 'fromAddress')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:4890: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Send (params?);
+  [param('uint8_t const *', 'buf'), param('uint32_t', 'size'), param('uint32_t', 'flags')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:4899: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::SendTo (params?);
+  [param('uint8_t const *', 'buf'), param('uint32_t', 'size'), param('uint32_t', 'flags'), param('ns3::Address const &', 'address')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:5083: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:5146: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:5192: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:5238: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:5284: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:5338: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:5569: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:6166: Warning: exception TypeLookupError(['ns3::DataCollector &'],) in wrapper public: virtual retval? ???::Output (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:6586: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:6661: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:7229: Warning: exception TypeLookupError(['ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: virtual retval? ???::AddLinkChangeCallback (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:7454: Warning: exception TypeLookupError(['ns3::Callback< void, ns3::Ptr< ns3::NetDevice >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: retval? ???::RegisterDeviceAdditionListener (params?);
+  [param('ns3::Callback< void, ns3::Ptr< ns3::NetDevice >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >', 'listener')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:7462: Warning: exception TypeLookupError(['ns3::Callback< void, ns3::Ptr< ns3::NetDevice >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: retval? ???::UnregisterDeviceAdditionListener (params?);
+  [param('ns3::Callback< void, ns3::Ptr< ns3::NetDevice >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >', 'listener')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:7570: Warning: exception TypeLookupError(['std::ostream *'],) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x973f3cc>
+  cls.add_constructor([param('std::ostream *', 'os')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:7574: Warning: exception TypeLookupError(['std::ostream *'],) in wrapper public: retval? ???::GetStream (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:7586: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x974438c>
+  cls.add_constructor([param('uint8_t const *', 'buffer'), param('uint32_t', 'size'), param('bool', 'magic')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:7588: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x97443ac>
+  cls.add_constructor([param('uint8_t const *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:7629: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyData (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:7634: Warning: exception TypeLookupError(['std::ostream *'],) in wrapper public: retval? ???::CopyData (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:7689: Warning: exception TypeLookupError(['uint8_t *'],) in wrapper public: retval? ???::PeekData (params?) const;
+  deprecated=True, is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:7708: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:7713: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::PrintByteTags (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:7718: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::PrintPacketTags (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:7755: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Serialize (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:7978: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Address >'],) in wrapper public: retval? ???::AddressBegin (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:7983: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::Address >'],) in wrapper public: retval? ???::AddressBegin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:7996: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Address >'],) in wrapper public: retval? ???::AddressEnd (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8001: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::Address >'],) in wrapper public: retval? ???::AddressEnd (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8005: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Address >'],) in wrapper public: retval? ???::AddressErase (params?);
+  [param('std::_List_iterator< ns3::Address >', 'position')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8009: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Address >'],) in wrapper public: retval? ???::AddressErase (params?);
+  [param('std::_List_iterator< ns3::Address >', 'first'), param('std::_List_iterator< ns3::Address >', 'last')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8018: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Address >'],) in wrapper public: retval? ???::AddressInsert (params?);
+  [param('std::_List_iterator< ns3::Address >', 'position'), param('ns3::Address const', 'value')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8057: Warning: exception TypeLookupError(['std::_List_iterator< unsigned char >'],) in wrapper public: retval? ???::PrefixBegin (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8062: Warning: exception TypeLookupError(['std::_List_const_iterator< unsigned char >'],) in wrapper public: retval? ???::PrefixBegin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8075: Warning: exception TypeLookupError(['std::_List_iterator< unsigned char >'],) in wrapper public: retval? ???::PrefixEnd (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8080: Warning: exception TypeLookupError(['std::_List_const_iterator< unsigned char >'],) in wrapper public: retval? ???::PrefixEnd (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8084: Warning: exception TypeLookupError(['std::_List_iterator< unsigned char >'],) in wrapper public: retval? ???::PrefixErase (params?);
+  [param('std::_List_iterator< unsigned char >', 'position')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8088: Warning: exception TypeLookupError(['std::_List_iterator< unsigned char >'],) in wrapper public: retval? ???::PrefixErase (params?);
+  [param('std::_List_iterator< unsigned char >', 'first'), param('std::_List_iterator< unsigned char >', 'last')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8097: Warning: exception TypeLookupError(['std::_List_iterator< unsigned char >'],) in wrapper public: retval? ???::PrefixInsert (params?);
+  [param('std::_List_iterator< unsigned char >', 'position'), param('uint8_t const', 'value')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8123: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8128: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8142: Warning: exception TypeLookupError(['ns3::Ptr< ns3::PbbAddressTlv >'],) in wrapper public: retval? ???::TlvBack (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8146: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbAddressTlv > >'],) in wrapper public: retval? ???::TlvBegin (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8151: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::Ptr< ns3::PbbAddressTlv > >'],) in wrapper public: retval? ???::TlvBegin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8164: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbAddressTlv > >'],) in wrapper public: retval? ???::TlvEnd (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8169: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::Ptr< ns3::PbbAddressTlv > >'],) in wrapper public: retval? ???::TlvEnd (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8173: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbAddressTlv > >'],) in wrapper public: retval? ???::TlvErase (params?);
+  [param('std::_List_iterator< ns3::Ptr< ns3::PbbAddressTlv > >', 'position')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8177: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbAddressTlv > >'],) in wrapper public: retval? ???::TlvErase (params?);
+  [param('std::_List_iterator< ns3::Ptr< ns3::PbbAddressTlv > >', 'first'), param('std::_List_iterator< ns3::Ptr< ns3::PbbAddressTlv > >', 'last')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8186: Warning: exception TypeLookupError(['ns3::Ptr< ns3::PbbAddressTlv >'],) in wrapper public: retval? ???::TlvFront (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8190: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbAddressTlv > >'],) in wrapper public: retval? ???::TlvInsert (params?);
+  [param('std::_List_iterator< ns3::Ptr< ns3::PbbAddressTlv > >', 'position'), param('ns3::Ptr< ns3::PbbTlv > const', 'value')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8216: Warning: exception TypeConfigurationError('direction not given',) in wrapper protected: virtual retval? ???::DeserializeAddress (params?) const = 0;
+  is_pure_virtual=True, is_const=True, visibility='protected', is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8226: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper protected: virtual retval? ???::PrintAddress (params?) const = 0;
+  is_pure_virtual=True, is_const=True, visibility='protected', is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8231: Warning: exception TypeConfigurationError('direction not given',) in wrapper protected: virtual retval? ???::SerializeAddress (params?) const = 0;
+  is_pure_virtual=True, is_const=True, visibility='protected', is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8243: Warning: exception TypeConfigurationError('direction not given',) in wrapper protected: virtual retval? ???::DeserializeAddress (params?) const;
+  is_const=True, visibility='protected', is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8253: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper protected: virtual retval? ???::PrintAddress (params?) const;
+  is_const=True, visibility='protected', is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8258: Warning: exception TypeConfigurationError('direction not given',) in wrapper protected: virtual retval? ???::SerializeAddress (params?) const;
+  is_const=True, visibility='protected', is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8270: Warning: exception TypeConfigurationError('direction not given',) in wrapper protected: virtual retval? ???::DeserializeAddress (params?) const;
+  is_const=True, visibility='protected', is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8280: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper protected: virtual retval? ???::PrintAddress (params?) const;
+  is_const=True, visibility='protected', is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8285: Warning: exception TypeConfigurationError('direction not given',) in wrapper protected: virtual retval? ???::SerializeAddress (params?) const;
+  is_const=True, visibility='protected', is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8303: Warning: exception TypeLookupError(['ns3::Ptr< ns3::PbbAddressBlock >'],) in wrapper public: retval? ???::AddressBlockBack (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8307: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbAddressBlock > >'],) in wrapper public: retval? ???::AddressBlockBegin (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8312: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::Ptr< ns3::PbbAddressBlock > >'],) in wrapper public: retval? ???::AddressBlockBegin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8325: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbAddressBlock > >'],) in wrapper public: retval? ???::AddressBlockEnd (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8330: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::Ptr< ns3::PbbAddressBlock > >'],) in wrapper public: retval? ???::AddressBlockEnd (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8334: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbAddressBlock > >'],) in wrapper public: retval? ???::AddressBlockErase (params?);
+  [param('std::_List_iterator< ns3::Ptr< ns3::PbbAddressBlock > >', 'position')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8338: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbAddressBlock > >'],) in wrapper public: retval? ???::AddressBlockErase (params?);
+  [param('std::_List_iterator< ns3::Ptr< ns3::PbbAddressBlock > >', 'first'), param('std::_List_iterator< ns3::Ptr< ns3::PbbAddressBlock > >', 'last')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8347: Warning: exception TypeLookupError(['ns3::Ptr< ns3::PbbAddressBlock >'],) in wrapper public: retval? ???::AddressBlockFront (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8432: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8437: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8471: Warning: exception TypeLookupError(['ns3::Ptr< ns3::PbbTlv >'],) in wrapper public: retval? ???::TlvBack (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8475: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbTlv > >'],) in wrapper public: retval? ???::TlvBegin (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8480: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::Ptr< ns3::PbbTlv > >'],) in wrapper public: retval? ???::TlvBegin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8493: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbTlv > >'],) in wrapper public: retval? ???::TlvEnd (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8498: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::Ptr< ns3::PbbTlv > >'],) in wrapper public: retval? ???::TlvEnd (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8502: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbTlv > >'],) in wrapper public: retval? ???::TlvErase (params?);
+  [param('std::_List_iterator< ns3::Ptr< ns3::PbbTlv > >', 'position')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8506: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbTlv > >'],) in wrapper public: retval? ???::TlvErase (params?);
+  [param('std::_List_iterator< ns3::Ptr< ns3::PbbTlv > >', 'first'), param('std::_List_iterator< ns3::Ptr< ns3::PbbTlv > >', 'last')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8515: Warning: exception TypeLookupError(['ns3::Ptr< ns3::PbbTlv >'],) in wrapper public: retval? ???::TlvFront (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8556: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper protected: virtual retval? ???::PrintOriginatorAddress (params?) const = 0;
+  is_pure_virtual=True, is_const=True, visibility='protected', is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8588: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper protected: virtual retval? ???::PrintOriginatorAddress (params?) const;
+  is_const=True, visibility='protected', is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8620: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper protected: virtual retval? ???::PrintOriginatorAddress (params?) const;
+  is_const=True, visibility='protected', is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8643: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbTlv > >'],) in wrapper public: retval? ???::Erase (params?);
+  [param('std::_List_iterator< ns3::Ptr< ns3::PbbTlv > >', 'position')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8647: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbTlv > >'],) in wrapper public: retval? ???::Erase (params?);
+  [param('std::_List_iterator< ns3::Ptr< ns3::PbbTlv > >', 'first'), param('std::_List_iterator< ns3::Ptr< ns3::PbbTlv > >', 'last')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8651: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbMessage > >'],) in wrapper public: retval? ???::Erase (params?);
+  [param('std::_List_iterator< ns3::Ptr< ns3::PbbMessage > >', 'position')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8655: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbMessage > >'],) in wrapper public: retval? ???::Erase (params?);
+  [param('std::_List_iterator< ns3::Ptr< ns3::PbbMessage > >', 'first'), param('std::_List_iterator< ns3::Ptr< ns3::PbbMessage > >', 'last')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8694: Warning: exception TypeLookupError(['ns3::Ptr< ns3::PbbMessage >'],) in wrapper public: retval? ???::MessageBack (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8698: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbMessage > >'],) in wrapper public: retval? ???::MessageBegin (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8703: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::Ptr< ns3::PbbMessage > >'],) in wrapper public: retval? ???::MessageBegin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8716: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbMessage > >'],) in wrapper public: retval? ???::MessageEnd (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8721: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::Ptr< ns3::PbbMessage > >'],) in wrapper public: retval? ???::MessageEnd (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8730: Warning: exception TypeLookupError(['ns3::Ptr< ns3::PbbMessage >'],) in wrapper public: retval? ???::MessageFront (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8756: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8774: Warning: exception TypeLookupError(['ns3::Ptr< ns3::PbbTlv >'],) in wrapper public: retval? ???::TlvBack (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8778: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbTlv > >'],) in wrapper public: retval? ???::TlvBegin (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8783: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::Ptr< ns3::PbbTlv > >'],) in wrapper public: retval? ???::TlvBegin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8796: Warning: exception TypeLookupError(['std::_List_iterator< ns3::Ptr< ns3::PbbTlv > >'],) in wrapper public: retval? ???::TlvEnd (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8801: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::Ptr< ns3::PbbTlv > >'],) in wrapper public: retval? ???::TlvEnd (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8810: Warning: exception TypeLookupError(['ns3::Ptr< ns3::PbbTlv >'],) in wrapper public: retval? ???::TlvFront (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8879: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8884: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:8905: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::SetValue (params?);
+  [param('uint8_t const *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:9108: Warning: exception TypeLookupError(['ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: virtual retval? ???::AddLinkChangeCallback (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:9610: Warning: exception TypeLookupError(['ns3::Hash::Hash32Function_ptr'],) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x9b0a4ec>
+  cls.add_constructor([param('ns3::Hash::Hash32Function_ptr', 'hp')])
+/home/chris/git/NS3-simulation/ns-3.18/src/network/bindings/modulegen__gcc_ILP32.py:9627: Warning: exception TypeLookupError(['ns3::Hash::Hash64Function_ptr'],) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x9b0f6ec>
+  cls.add_constructor([param('ns3::Hash::Hash64Function_ptr', 'hp')])
+/home/chris/git/NS3-simulation/pybindgen-0.16.0.831/pybindgen/cppclass_typehandlers.py:1098: UserWarning: Returning shared pointers is dangerous!  The C++ API should be redesigned to avoid this situation.
+  warnings.warn("Returning shared pointers is dangerous!"
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::DataOutputCallback cannot be constructed (class has pure virtual methods)',) in wrapper public: virtual void ns3::MinMaxAvgTotalCalculator< unsigned int >::Output (ns3::DataOutputCallback & callback) const;
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::DataOutputCallback cannot be constructed (class has pure virtual methods)',) in wrapper public: virtual void ns3::CounterCalculator< unsigned int >::Output (ns3::DataOutputCallback & callback) const;
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::AsciiTraceHelperForDevice cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::AsciiTraceHelperForDevice'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::PcapHelperForDevice cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::PcapHelperForDevice'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::Tag cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::Tag'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::Chunk cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::Chunk'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::Header cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::Header'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::Queue cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::Queue'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::SimpleRefCount< ns3::PbbPacket, ns3::Header, ns3::DefaultDeleter<ns3::PbbPacket> > cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::SimpleRefCount< ns3::PbbPacket, ns3::Header, ns3::DefaultDeleter<ns3::PbbPacket> >'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::Socket cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::Socket'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::SocketFactory cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::SocketFactory'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::Trailer cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::Trailer'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::Channel cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::Channel'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::DataRateChecker cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::DataRateChecker'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::ErrorModel cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::ErrorModel'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::Ipv4AddressChecker cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::Ipv4AddressChecker'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::Ipv4MaskChecker cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::Ipv4MaskChecker'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::Ipv6AddressChecker cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::Ipv6AddressChecker'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::Ipv6PrefixChecker cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::Ipv6PrefixChecker'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::Mac16AddressChecker cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::Mac16AddressChecker'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::Mac48AddressChecker cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::Mac48AddressChecker'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::Mac64AddressChecker cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::Mac64AddressChecker'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::NetDevice cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::NetDevice'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::PbbAddressBlock cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::PbbAddressBlock'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::PbbMessage cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::PbbMessage'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::AddressChecker cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::AddressChecker'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))

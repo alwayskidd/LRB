@@ -1,0 +1,137 @@
+>>>>>>>>>>>>>>>> [['bool', 'ns3::Ptr<ns3::NetDevice>', 'ns3::Ptr<ns3::Packet const>', 'unsigned short', 'ns3::Address const&', 'ns3::Address const&', 'ns3::NetDevice::PacketType', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['bool', 'ns3::Ptr<ns3::NetDevice>', 'ns3::Ptr<ns3::Packet const>', 'unsigned short', 'ns3::Address const&', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['bool', 'ns3::Ptr<ns3::Packet>', 'ns3::Address const&', 'ns3::Address const&', 'unsigned short', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['void', 'ns3::Ptr<ns3::NetDevice>', 'ns3::Ptr<ns3::Packet const>', 'unsigned short', 'ns3::Address const&', 'ns3::Address const&', 'ns3::NetDevice::PacketType', 'ns3::empty', 'ns3::empty', 'ns3::empty']]
+***** registering callback handler: 'ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< bool, ns3::Ptr< ns3::Packet >, ns3::Address const &, ns3::Address const &, unsigned short, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< void, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >'
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:310: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x886fcac>
+  cls.add_constructor([param('uint8_t', 'type'), param('uint8_t const *', 'buffer'), param('uint8_t', 'len')])
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:321: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyAllFrom (params?);
+  [param('uint8_t const *', 'buffer'), param('uint8_t', 'len')])
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:326: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyAllTo (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:330: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyFrom (params?);
+  [param('uint8_t const *', 'buffer'), param('uint8_t', 'len')])
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:335: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyTo (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:385: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::AttributeConstructionList::Item >'],) in wrapper public: retval? ???::Begin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:390: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::AttributeConstructionList::Item >'],) in wrapper public: retval? ???::End (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:441: Warning: exception TypeLookupError(['std::ostream *'],) in wrapper public: retval? ???::CopyData (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:446: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyData (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:460: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Deserialize (params?);
+  [param('uint8_t const *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:490: Warning: exception TypeLookupError(['uint8_t *'],) in wrapper public: retval? ???::PeekData (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:503: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Serialize (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:558: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Read (params?);
+  [param('uint8_t *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:602: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Write (params?);
+  [param('uint8_t const *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:836: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Deserialize (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:901: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:906: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Serialize (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:973: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:990: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x8a19f6c>
+  cls.add_constructor([param('uint8_t *', 'address')])
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1008: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Deserialize (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1033: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::GetBytes (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1122: Warning: exception TypeLookupError(['ns3::Mac16Address'],) in wrapper public: retval? ???::MakeAutoconfiguredAddress (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1127: Warning: exception TypeLookupError(['ns3::Mac48Address'],) in wrapper public: retval? ???::MakeAutoconfiguredAddress (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1132: Warning: exception TypeLookupError(['ns3::Mac64Address'],) in wrapper public: retval? ???::MakeAutoconfiguredAddress (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1137: Warning: exception TypeLookupError(['ns3::Mac16Address'],) in wrapper public: retval? ???::MakeAutoconfiguredLinkLocalAddress (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1142: Warning: exception TypeLookupError(['ns3::Mac48Address'],) in wrapper public: retval? ???::MakeAutoconfiguredLinkLocalAddress (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1147: Warning: exception TypeLookupError(['ns3::Mac64Address'],) in wrapper public: retval? ???::MakeAutoconfiguredLinkLocalAddress (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1162: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1167: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Serialize (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1175: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Set (params?);
+  [param('uint8_t *', 'address')])
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1185: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x8a7466c>
+  cls.add_constructor([param('uint8_t *', 'prefix')])
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1198: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::GetBytes (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1233: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1306: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::Delete (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1343: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Deserialize (params?);
+  [param('uint8_t const *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1384: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Serialize (params?) const;
+  is_const=True)
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception TypeLookupError(['uint8_t [ 20 ]'],) in wrapper None
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper None
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1536: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1548: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x8b5128c>
+  cls.add_constructor([param('uint8_t *', 'start'), param('uint8_t *', 'end')])
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1556: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Read (params?);
+  [param('uint8_t *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1584: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Write (params?);
+  [param('uint8_t const *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1649: Warning: exception TypeLookupError(['ns3::Callback< ns3::ObjectBase *, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: retval? ???::GetConstructor (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1728: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::LookupByHashFailSafe (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1822: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:1850: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:2072: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:2409: Warning: exception TypeLookupError(['ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: virtual retval? ???::AddLinkChangeCallback (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:2424: Warning: exception TypeLookupError(['ns3::Ptr< ns3::Channel >', 'ns3::Channel *'],) in wrapper public: virtual retval? ???::GetChannel (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:2586: Warning: exception TypeLookupError(['ns3::Ptr< ns3::Application >', 'ns3::Application *'],) in wrapper public: retval? ???::AddApplication (params?);
+  [param('ns3::Ptr< ns3::Application >', 'application')])
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:2600: Warning: exception TypeLookupError(['ns3::Ptr< ns3::Application >', 'ns3::Application *'],) in wrapper public: retval? ???::GetApplication (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:2634: Warning: exception TypeLookupError(['ns3::Callback< void, ns3::Ptr< ns3::NetDevice >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: retval? ???::RegisterDeviceAdditionListener (params?);
+  [param('ns3::Callback< void, ns3::Ptr< ns3::NetDevice >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >', 'listener')])
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:2642: Warning: exception TypeLookupError(['ns3::Callback< void, ns3::Ptr< ns3::NetDevice >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: retval? ???::UnregisterDeviceAdditionListener (params?);
+  [param('ns3::Callback< void, ns3::Ptr< ns3::NetDevice >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >', 'listener')])
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:2668: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x8dab34c>
+  cls.add_constructor([param('uint8_t const *', 'buffer'), param('uint32_t', 'size'), param('bool', 'magic')])
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:2670: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x8dab36c>
+  cls.add_constructor([param('uint8_t const *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:2711: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyData (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:2716: Warning: exception TypeLookupError(['std::ostream *'],) in wrapper public: retval? ???::CopyData (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:2771: Warning: exception TypeLookupError(['uint8_t *'],) in wrapper public: retval? ???::PeekData (params?) const;
+  deprecated=True, is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:2790: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:2795: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::PrintByteTags (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:2800: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::PrintPacketTags (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:2837: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Serialize (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:2893: Warning: exception TypeLookupError(['ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: virtual retval? ???::AddLinkChangeCallback (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:2908: Warning: exception TypeLookupError(['ns3::Ptr< ns3::Channel >', 'ns3::Channel *'],) in wrapper public: virtual retval? ???::GetChannel (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:3129: Warning: exception TypeLookupError(['ns3::Hash::Hash32Function_ptr'],) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x8e8e50c>
+  cls.add_constructor([param('ns3::Hash::Hash32Function_ptr', 'hp')])
+/home/chris/git/NS3-simulation/ns-3.18/src/virtual-net-device/bindings/modulegen__gcc_ILP32.py:3146: Warning: exception TypeLookupError(['ns3::Hash::Hash64Function_ptr'],) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x8e9270c>
+  cls.add_constructor([param('ns3::Hash::Hash64Function_ptr', 'hp')])

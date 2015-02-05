@@ -1,0 +1,827 @@
+>>>>>>>>>>>>>>>> [['void', 'ns3::Ptr<ns3::Packet const>', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['void', 'unsigned short', 'ns3::Ptr<ns3::SpectrumValue>', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['void', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['void', 'ns3::Ptr<ns3::Packet>', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['void', 'ns3::DlInfoListElement_s', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['void', 'std::list<ns3::Ptr<ns3::LteControlMessage>, std::allocator<ns3::Ptr<ns3::LteControlMessage> > >', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['void', 'ns3::UlInfoListElement_s', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['bool', 'ns3::Ptr<ns3::NetDevice>', 'ns3::Ptr<ns3::Packet const>', 'unsigned short', 'ns3::Address const&', 'ns3::Address const&', 'ns3::NetDevice::PacketType', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['bool', 'ns3::Ptr<ns3::NetDevice>', 'ns3::Ptr<ns3::Packet const>', 'unsigned short', 'ns3::Address const&', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['bool', 'ns3::Ptr<ns3::Packet>', 'ns3::Address const&', 'ns3::Address const&', 'unsigned short', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['void', 'ns3::Ptr<ns3::NetDevice>', 'ns3::Ptr<ns3::Packet const>', 'unsigned short', 'ns3::Address const&', 'ns3::Address const&', 'ns3::NetDevice::PacketType', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['void', 'ns3::Ptr<ns3::Socket>', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['void', 'ns3::Ptr<ns3::Socket>', 'unsigned int', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['void', 'ns3::Ptr<ns3::Socket>', 'ns3::Address const&', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['bool', 'ns3::Ptr<ns3::Socket>', 'ns3::Address const&', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty']]
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception TypeLookupError(['std::vector< ns3::RlcPduListElement_s >'],) in wrapper <pybindgen.Container 'std::vector< std::vector< ns3::RlcPduListElement_s > >'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+***** registering callback handler: 'ns3::Callback< void, ns3::Ptr< ns3::Packet const >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< void, unsigned short, ns3::Ptr< ns3::SpectrumValue >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< void, ns3::Ptr< ns3::Packet >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< void, ns3::DlInfoListElement_s, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'
+/home/chris/git/NS3-simulation/ns-3.18/bindings/python/ns3modulegen_core_customizations.py:228: Warning: ***** Unable to register callback; parameter 'std::list<ns3::Ptr<ns3::LteControlMessage>, std::allocator<ns3::Ptr<ns3::LteControlMessage> > > arg1' error (used in ns3::Callback< void, std::list<ns3::Ptr<ns3::LteControlMessage>, std::allocator<ns3::Ptr<ns3::LteControlMessage> > >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >): TypeLookupError(['std::list< ns3::Ptr< ns3::LteControlMessage >, std::allocator< ns3::Ptr< ns3::LteControlMessage > > >'],)
+  Warning)
+***** registering callback handler: 'ns3::Callback< void, ns3::UlInfoListElement_s, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< bool, ns3::Ptr< ns3::Packet >, ns3::Address const &, ns3::Address const &, unsigned short, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< void, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< void, ns3::Ptr< ns3::Socket >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< void, ns3::Ptr< ns3::Socket >, unsigned int, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< void, ns3::Ptr< ns3::Socket >, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< bool, ns3::Ptr< ns3::Socket >, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:2096: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x9edf22c>
+  cls.add_constructor([param('uint8_t', 'type'), param('uint8_t const *', 'buffer'), param('uint8_t', 'len')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:2107: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyAllFrom (params?);
+  [param('uint8_t const *', 'buffer'), param('uint8_t', 'len')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:2112: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyAllTo (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:2116: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyFrom (params?);
+  [param('uint8_t const *', 'buffer'), param('uint8_t', 'len')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:2121: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyTo (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:2184: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::AttributeConstructionList::Item >'],) in wrapper public: retval? ???::Begin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:2189: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::AttributeConstructionList::Item >'],) in wrapper public: retval? ???::End (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:2253: Warning: exception TypeLookupError(['std::ostream *'],) in wrapper public: retval? ???::CopyData (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:2258: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyData (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:2272: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Deserialize (params?);
+  [param('uint8_t const *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:2302: Warning: exception TypeLookupError(['uint8_t *'],) in wrapper public: retval? ???::PeekData (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:2315: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Serialize (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:2370: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Read (params?);
+  [param('uint8_t *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:2414: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Write (params?);
+  [param('uint8_t const *', 'buffer'), param('uint32_t', 'size')])
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception TypeLookupError(['int [ 64 ]'],) in wrapper None
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception TypeLookupError(['std::vector< std::vector< ns3::RlcPduListElement_s > >'],) in wrapper None
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception TypeLookupError(['std::bitset< 4096u >'],) in wrapper None
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:3652: Warning: exception TypeLookupError(['ns3::Ptr< ns3::EventImpl > &'],) in wrapper <pybindgen.cppmethod.CppConstructor object at 0xa3c26ec>
+  cls.add_constructor([param('ns3::Ptr< ns3::EventImpl > const &', 'impl'), param('uint64_t', 'ts'), param('uint32_t', 'context'), param('uint32_t', 'uid')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:3686: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::PeekEventImpl (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:4556: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Deserialize (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:4621: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:4626: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Serialize (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:4739: Warning: exception TypeLookupError(['std::pair< ns3::Ptr< ns3::Ipv4 >, unsigned int >'],) in wrapper public: retval? ???::Add (params?);
+  [param('std::pair< ns3::Ptr< ns3::Ipv4 >, unsigned int >', 'ipInterfacePair')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:4748: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< std::pair< ns3::Ptr< ns3::Ipv4 >, unsigned int > const, std::vector< std::pair< ns3::Ptr< ns3::Ipv4 >, unsigned int > > >'],) in wrapper public: retval? ???::Begin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:4753: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< std::pair< ns3::Ptr< ns3::Ipv4 >, unsigned int > const, std::vector< std::pair< ns3::Ptr< ns3::Ipv4 >, unsigned int > > >'],) in wrapper public: retval? ???::End (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:4758: Warning: exception TypeLookupError(['std::pair< ns3::Ptr< ns3::Ipv4 >, unsigned int >'],) in wrapper public: retval? ???::Get (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:4831: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:4848: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0xa7bbcec>
+  cls.add_constructor([param('uint8_t *', 'address')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:4866: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Deserialize (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:4891: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::GetBytes (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:4980: Warning: exception TypeLookupError(['ns3::Mac16Address'],) in wrapper public: retval? ???::MakeAutoconfiguredAddress (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:4990: Warning: exception TypeLookupError(['ns3::Mac64Address'],) in wrapper public: retval? ???::MakeAutoconfiguredAddress (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:4995: Warning: exception TypeLookupError(['ns3::Mac16Address'],) in wrapper public: retval? ???::MakeAutoconfiguredLinkLocalAddress (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:5005: Warning: exception TypeLookupError(['ns3::Mac64Address'],) in wrapper public: retval? ???::MakeAutoconfiguredLinkLocalAddress (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:5020: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:5025: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Serialize (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:5033: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Set (params?);
+  [param('uint8_t *', 'address')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:5098: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0xa82b4ec>
+  cls.add_constructor([param('uint8_t *', 'prefix')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:5111: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::GetBytes (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:5146: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:5276: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::AddLc (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:6585: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::AddLc (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper None
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:6950: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyFrom (params?);
+  [param('uint8_t const *', 'buffer')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:6955: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyTo (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:7103: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< ns3::Ptr< ns3::NetDevice > const, std::vector< ns3::Ptr< ns3::NetDevice > > >'],) in wrapper public: retval? ???::Begin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:7108: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< ns3::Ptr< ns3::NetDevice > const, std::vector< ns3::Ptr< ns3::NetDevice > > >'],) in wrapper public: retval? ???::End (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:7154: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< ns3::Ptr< ns3::Node > const, std::vector< ns3::Ptr< ns3::Node > > >'],) in wrapper public: retval? ???::Begin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:7167: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< ns3::Ptr< ns3::Node > const, std::vector< ns3::Ptr< ns3::Node > > >'],) in wrapper public: retval? ???::End (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:7255: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::Delete (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:7328: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Deserialize (params?);
+  [param('uint8_t const *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:7369: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Serialize (params?) const;
+  is_const=True)
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception TypeLookupError(['uint8_t [ 20 ]'],) in wrapper None
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:7597: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::NotifyConnectionReconfigurationEnb (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:7602: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::NotifyConnectionReconfigurationUe (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:7607: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::NotifyConnectionSetupUe (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:7612: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::NotifyHandoverEndOkEnb (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:7617: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::NotifyHandoverEndOkUe (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:7622: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::NotifyHandoverStartEnb (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:7627: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::NotifyHandoverStartUe (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:7632: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::NotifyNewUeContextEnb (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:7637: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::NotifyRandomAccessSuccessfulUe (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:7644: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0xafd418c>
+  cls.add_constructor([param('ns3::LteEnbRrcProtocolReal *', 'pdcp'), param('uint16_t', 'rnti')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:7772: Warning: exception TypeLookupError(['ns3::Ptr< ns3::SimulatorImpl >', 'ns3::SimulatorImpl *'],) in wrapper public: retval? ???::GetImplementation (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:7807: Warning: exception TypeLookupError(['ns3::Ptr< ns3::SimulatorImpl >', 'ns3::SimulatorImpl *'],) in wrapper public: retval? ???::SetImplementation (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:7937: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:7949: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0xb06dc0c>
+  cls.add_constructor([param('uint8_t *', 'start'), param('uint8_t *', 'end')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:7957: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Read (params?);
+  [param('uint8_t *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:7985: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Write (params?);
+  [param('uint8_t const *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:8172: Warning: exception TypeLookupError(['ns3::Callback< ns3::ObjectBase *, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: retval? ???::GetConstructor (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:8251: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::LookupByHashFailSafe (params?);
+  is_static=True)
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception TypeLookupError(['short unsigned int'],) in wrapper None
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:8770: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:8826: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:8867: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:8983: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:9111: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:9327: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:9379: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:9435: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:9542: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:9641: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:9699: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:9790: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::Ptr< ns3::Packet > >'],) in wrapper public: retval? ???::Begin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:9800: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::Ptr< ns3::Packet > >'],) in wrapper public: retval? ???::End (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:9864: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:9944: Warning: exception TypeLookupError(['ns3::RngStream *'],) in wrapper protected: retval? ???::Peek (params?) const;
+  is_const=True, visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:9983: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:10445: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Recv (params?);
+  [param('uint8_t *', 'buf'), param('uint32_t', 'size'), param('uint32_t', 'flags')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:10458: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::RecvFrom (params?);
+  [param('uint8_t *', 'buf'), param('uint32_t', 'size'), param('uint32_t', 'flags'), param('ns3::Address &', 'fromAddress')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:10471: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Send (params?);
+  [param('uint8_t const *', 'buf'), param('uint32_t', 'size'), param('uint32_t', 'flags')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:10480: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::SendTo (params?);
+  [param('uint8_t const *', 'buf'), param('uint32_t', 'size'), param('uint32_t', 'flags'), param('ns3::Address const &', 'address')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:10664: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:10710: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:10756: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:10802: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:10848: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:10902: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:10930: Warning: exception TypeLookupError(['ns3::Ptr< ns3::SpectrumErrorModel >', 'ns3::SpectrumErrorModel *'],) in wrapper public: retval? ???::SetErrorModel (params?);
+  [param('ns3::Ptr< ns3::SpectrumErrorModel >', 'e')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:10958: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< ns3::BandInfo const *, std::vector< ns3::BandInfo > >'],) in wrapper public: retval? ???::Begin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:10963: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< ns3::BandInfo const *, std::vector< ns3::BandInfo > >'],) in wrapper public: retval? ???::End (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11018: Warning: exception TypeLookupError(['ns3::Ptr< ns3::AntennaModel >', 'ns3::AntennaModel *'],) in wrapper public: virtual retval? ???::GetRxAntenna (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception TypeLookupError(['ns3::Ptr< ns3::AntennaModel >', 'ns3::AntennaModel *'],) in wrapper None
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11106: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< ns3::BandInfo const *, std::vector< ns3::BandInfo > >'],) in wrapper public: retval? ???::ConstBandsBegin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11111: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< ns3::BandInfo const *, std::vector< ns3::BandInfo > >'],) in wrapper public: retval? ???::ConstBandsEnd (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11116: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< double const *, std::vector< double > >'],) in wrapper public: retval? ???::ConstValuesBegin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11121: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< double const *, std::vector< double > >'],) in wrapper public: retval? ???::ConstValuesEnd (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11140: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< double *, std::vector< double > >'],) in wrapper public: retval? ???::ValuesBegin (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11144: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< double *, std::vector< double > >'],) in wrapper public: retval? ???::ValuesEnd (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11396: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11874: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11884: Warning: exception TypeLookupError(['std::bitset< 8u > *'],) in wrapper protected: retval? ???::DeserializeBitset (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11889: Warning: exception TypeLookupError(['std::bitset< 1u > *'],) in wrapper protected: retval? ???::DeserializeBitstring (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11894: Warning: exception TypeLookupError(['std::bitset< 2u > *'],) in wrapper protected: retval? ???::DeserializeBitstring (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11899: Warning: exception TypeLookupError(['std::bitset< 8u > *'],) in wrapper protected: retval? ???::DeserializeBitstring (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11904: Warning: exception TypeLookupError(['std::bitset< 10u > *'],) in wrapper protected: retval? ???::DeserializeBitstring (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11909: Warning: exception TypeLookupError(['std::bitset< 16u > *'],) in wrapper protected: retval? ???::DeserializeBitstring (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11914: Warning: exception TypeLookupError(['std::bitset< 27u > *'],) in wrapper protected: retval? ???::DeserializeBitstring (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11919: Warning: exception TypeLookupError(['std::bitset< 28u > *'],) in wrapper protected: retval? ???::DeserializeBitstring (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11924: Warning: exception TypeLookupError(['std::bitset< 32u > *'],) in wrapper protected: retval? ???::DeserializeBitstring (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11934: Warning: exception TypeConfigurationError('direction not given',) in wrapper protected: retval? ???::DeserializeChoice (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11939: Warning: exception TypeConfigurationError('direction not given',) in wrapper protected: retval? ???::DeserializeEnum (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11944: Warning: exception TypeConfigurationError('direction not given',) in wrapper protected: retval? ???::DeserializeInteger (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11954: Warning: exception TypeLookupError(['std::bitset< 0u > *'],) in wrapper protected: retval? ???::DeserializeSequence (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11959: Warning: exception TypeLookupError(['std::bitset< 1u > *'],) in wrapper protected: retval? ???::DeserializeSequence (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11964: Warning: exception TypeLookupError(['std::bitset< 2u > *'],) in wrapper protected: retval? ???::DeserializeSequence (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11969: Warning: exception TypeLookupError(['std::bitset< 3u > *'],) in wrapper protected: retval? ???::DeserializeSequence (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11974: Warning: exception TypeLookupError(['std::bitset< 4u > *'],) in wrapper protected: retval? ???::DeserializeSequence (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11979: Warning: exception TypeLookupError(['std::bitset< 5u > *'],) in wrapper protected: retval? ???::DeserializeSequence (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11984: Warning: exception TypeLookupError(['std::bitset< 6u > *'],) in wrapper protected: retval? ???::DeserializeSequence (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11989: Warning: exception TypeLookupError(['std::bitset< 9u > *'],) in wrapper protected: retval? ???::DeserializeSequence (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11994: Warning: exception TypeLookupError(['std::bitset< 10u > *'],) in wrapper protected: retval? ???::DeserializeSequence (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:11999: Warning: exception TypeLookupError(['std::bitset< 11u > *'],) in wrapper protected: retval? ???::DeserializeSequence (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12004: Warning: exception TypeConfigurationError('direction not given',) in wrapper protected: retval? ???::DeserializeSequenceOf (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12014: Warning: exception TypeLookupError(['std::bitset< 1u >'],) in wrapper protected: retval? ???::SerializeBitstring (params?) const;
+  is_const=True, visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12019: Warning: exception TypeLookupError(['std::bitset< 2u >'],) in wrapper protected: retval? ???::SerializeBitstring (params?) const;
+  is_const=True, visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12024: Warning: exception TypeLookupError(['std::bitset< 8u >'],) in wrapper protected: retval? ???::SerializeBitstring (params?) const;
+  is_const=True, visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12029: Warning: exception TypeLookupError(['std::bitset< 10u >'],) in wrapper protected: retval? ???::SerializeBitstring (params?) const;
+  is_const=True, visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12034: Warning: exception TypeLookupError(['std::bitset< 16u >'],) in wrapper protected: retval? ???::SerializeBitstring (params?) const;
+  is_const=True, visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12039: Warning: exception TypeLookupError(['std::bitset< 27u >'],) in wrapper protected: retval? ???::SerializeBitstring (params?) const;
+  is_const=True, visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12044: Warning: exception TypeLookupError(['std::bitset< 28u >'],) in wrapper protected: retval? ???::SerializeBitstring (params?) const;
+  is_const=True, visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12049: Warning: exception TypeLookupError(['std::bitset< 32u >'],) in wrapper protected: retval? ???::SerializeBitstring (params?) const;
+  is_const=True, visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12084: Warning: exception TypeLookupError(['std::bitset< 0u >'],) in wrapper protected: retval? ???::SerializeSequence (params?) const;
+  is_const=True, visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12089: Warning: exception TypeLookupError(['std::bitset< 1u >'],) in wrapper protected: retval? ???::SerializeSequence (params?) const;
+  is_const=True, visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12094: Warning: exception TypeLookupError(['std::bitset< 2u >'],) in wrapper protected: retval? ???::SerializeSequence (params?) const;
+  is_const=True, visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12099: Warning: exception TypeLookupError(['std::bitset< 3u >'],) in wrapper protected: retval? ???::SerializeSequence (params?) const;
+  is_const=True, visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12104: Warning: exception TypeLookupError(['std::bitset< 4u >'],) in wrapper protected: retval? ???::SerializeSequence (params?) const;
+  is_const=True, visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12109: Warning: exception TypeLookupError(['std::bitset< 5u >'],) in wrapper protected: retval? ???::SerializeSequence (params?) const;
+  is_const=True, visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12114: Warning: exception TypeLookupError(['std::bitset< 6u >'],) in wrapper protected: retval? ???::SerializeSequence (params?) const;
+  is_const=True, visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12119: Warning: exception TypeLookupError(['std::bitset< 9u >'],) in wrapper protected: retval? ???::SerializeSequence (params?) const;
+  is_const=True, visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12124: Warning: exception TypeLookupError(['std::bitset< 10u >'],) in wrapper protected: retval? ???::SerializeSequence (params?) const;
+  is_const=True, visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12129: Warning: exception TypeLookupError(['std::bitset< 11u >'],) in wrapper protected: retval? ???::SerializeSequence (params?) const;
+  is_const=True, visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12453: Warning: exception TypeLookupError(['ns3::DataCollector &'],) in wrapper public: virtual retval? ???::Output (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12704: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetS1SapProvider (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12708: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetS1apSapEnb (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12725: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetS1SapUser (params?);
+  [param('ns3::EpcEnbS1SapUser *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12729: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetS1apSapMme (params?);
+  [param('ns3::EpcS1apSapMme *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12809: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::AddEnb (params?);
+  [param('uint16_t', 'egci'), param('ns3::Ipv4Address', 'enbS1UAddr'), param('ns3::EpcS1apSapEnb *', 'enbS1apSap')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12817: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetS11SapMme (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12821: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetS1apSapMme (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12830: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetS11SapSgw (params?);
+  [param('ns3::EpcS11SapSgw *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12842: Warning: exception TypeLookupError(['ns3::Ptr< ns3::VirtualNetDevice >'],) in wrapper <pybindgen.cppmethod.CppConstructor object at 0xbb34f6c>
+  cls.add_constructor([param('ns3::Ptr< ns3::VirtualNetDevice > const', 'tunDevice'), param('ns3::Ptr< ns3::Socket > const', 's1uSocket')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12859: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetS11SapSgw (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12884: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetS11SapMme (params?);
+  [param('ns3::EpcS11SapMme *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:12990: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetAsSapUser (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:13003: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetAsSapProvider (params?);
+  [param('ns3::LteAsSapProvider *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:13035: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetEpcX2SapProvider (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:13052: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetEpcX2SapUser (params?);
+  [param('ns3::EpcX2SapUser *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:13149: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:13228: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:13326: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:13401: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:13469: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:13535: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:13609: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:13678: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:13808: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: virtual retval? ???::GetFfMacCschedSapProvider (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:13813: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: virtual retval? ???::GetFfMacSchedSapProvider (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:13823: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::SetFfMacCschedSapUser (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:13828: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::SetFfMacSchedSapUser (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:13954: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14048: Warning: exception TypeLookupError(['ns3::Callback< void, ns3::Ptr< ns3::Packet >, ns3::Ipv4Address, ns3::Ipv4Address, unsigned char, ns3::Ptr< ns3::Ipv4Route >, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: virtual retval? ???::GetDownTarget (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14053: Warning: exception TypeLookupError(['ns3::Callback< void, ns3::Ptr< ns3::Packet >, ns3::Ipv6Address, ns3::Ipv6Address, unsigned char, ns3::Ptr< ns3::Ipv6Route >, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: virtual retval? ???::GetDownTarget6 (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14068: Warning: exception TypeLookupError(['ns3::Ptr< ns3::Ipv4Interface >', 'ns3::Ipv4Interface *'],) in wrapper public: virtual retval? ???::Receive (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14078: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: virtual retval? ???::ReceiveIcmp (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14083: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: virtual retval? ???::ReceiveIcmp (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14088: Warning: exception TypeLookupError(['ns3::Callback< void, ns3::Ptr< ns3::Packet >, ns3::Ipv4Address, ns3::Ipv4Address, unsigned char, ns3::Ptr< ns3::Ipv4Route >, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: virtual retval? ???::SetDownTarget (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14093: Warning: exception TypeLookupError(['ns3::Callback< void, ns3::Ptr< ns3::Packet >, ns3::Ipv6Address, ns3::Ipv6Address, unsigned char, ns3::Ptr< ns3::Ipv6Route >, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: virtual retval? ???::SetDownTarget6 (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14175: Warning: exception TypeLookupError(['ns3::Ptr< ns3::Ipv4RoutingProtocol >', 'ns3::Ipv4RoutingProtocol *'],) in wrapper public: virtual retval? ???::GetRoutingProtocol (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14245: Warning: exception TypeLookupError(['ns3::Ptr< ns3::Ipv4RoutingProtocol >', 'ns3::Ipv4RoutingProtocol *'],) in wrapper public: virtual retval? ???::SetRoutingProtocol (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14778: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetFfMacCschedSapUser (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14782: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetFfMacSchedSapUser (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14786: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLteEnbCmacSapProvider (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14790: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLteEnbPhySapUser (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14794: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLteMacSapProvider (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14803: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetFfMacCschedSapProvider (params?);
+  [param('ns3::FfMacCschedSapProvider *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14807: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetFfMacSchedSapProvider (params?);
+  [param('ns3::FfMacSchedSapProvider *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14811: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteEnbCmacSapUser (params?);
+  [param('ns3::LteEnbCmacSapUser *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14815: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteEnbPhySapProvider (params?);
+  [param('ns3::LteEnbPhySapProvider *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14819: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteMacSapUser (params?);
+  [param('ns3::LteMacSapUser *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14846: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetEpcX2SapUser (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14850: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLteEnbCmacSapUser (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14854: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLteEnbCphySapUser (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14858: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLteEnbRrcSapProvider (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14862: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetS1SapUser (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14900: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetEpcX2SapProvider (params?);
+  [param('ns3::EpcX2SapProvider *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14908: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteEnbCmacSapProvider (params?);
+  [param('ns3::LteEnbCmacSapProvider *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14912: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteEnbCphySapProvider (params?);
+  [param('ns3::LteEnbCphySapProvider *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14916: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteEnbRrcSapUser (params?);
+  [param('ns3::LteEnbRrcSapUser *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14920: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteMacSapProvider (params?);
+  [param('ns3::LteMacSapProvider *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14924: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetS1SapProvider (params?);
+  [param('ns3::EpcEnbS1SapProvider *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14949: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLteEnbRrcSapUser (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14958: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetUeRrcSapProvider (params?);
+  [param('uint16_t', 'rnti')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14966: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteEnbRrcSapProvider (params?);
+  [param('ns3::LteEnbRrcSapProvider *', 'p')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14970: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetUeRrcSapProvider (params?);
+  [param('uint16_t', 'rnti'), param('ns3::LteUeRrcSapProvider *', 'p')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14986: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLteEnbRrcSapUser (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:14995: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetUeRrcSapProvider (params?);
+  [param('uint16_t', 'rnti')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:15003: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteEnbRrcSapProvider (params?);
+  [param('ns3::LteEnbRrcSapProvider *', 'p')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:15007: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetUeRrcSapProvider (params?);
+  [param('uint16_t', 'rnti'), param('ns3::LteUeRrcSapProvider *', 'p')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:15339: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLtePdcpSapProvider (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:15343: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLteRlcSapUser (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:15360: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLtePdcpSapUser (params?);
+  [param('ns3::LtePdcpSapUser *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:15364: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteRlcSapProvider (params?);
+  [param('ns3::LteRlcSapProvider *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:15544: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLteMacSapUser (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:15548: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLteRlcSapProvider (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:15561: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteMacSapProvider (params?);
+  [param('ns3::LteMacSapProvider *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:15565: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteRlcSapUser (params?);
+  [param('ns3::LteRlcSapUser *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:15830: Warning: exception TypeLookupError(['ns3::Ptr< ns3::AntennaModel >', 'ns3::AntennaModel *'],) in wrapper public: virtual retval? ???::GetRxAntenna (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:15863: Warning: exception TypeLookupError(['ns3::Ptr< ns3::AntennaModel >', 'ns3::AntennaModel *'],) in wrapper public: retval? ???::SetAntenna (params?);
+  [param('ns3::Ptr< ns3::AntennaModel >', 'a')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:15891: Warning: exception TypeLookupError(['ns3::LtePhyRxCtrlEndOkCallback'],) in wrapper public: retval? ???::SetLtePhyRxCtrlEndOkCallback (params?);
+  [param('ns3::LtePhyRxCtrlEndOkCallback', 'c')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16135: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLteMacSapProvider (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16139: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLteUeCmacSapProvider (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16143: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLteUePhySapUser (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16152: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteUeCmacSapUser (params?);
+  [param('ns3::LteUeCmacSapUser *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16156: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteUePhySapProvider (params?);
+  [param('ns3::LteUePhySapProvider *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16203: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLteUeCphySapProvider (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16207: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLteUePhySapProvider (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16281: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteUeCphySapUser (params?);
+  [param('ns3::LteUeCphySapUser *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16285: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteUePhySapUser (params?);
+  [param('ns3::LteUePhySapUser *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16331: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetAsSapProvider (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16354: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLteUeCmacSapUser (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16358: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLteUeCphySapUser (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16362: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLteUeRrcSapProvider (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16390: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetAsSapUser (params?);
+  [param('ns3::LteAsSapUser *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16398: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteMacSapProvider (params?);
+  [param('ns3::LteMacSapProvider *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16402: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteUeCmacSapProvider (params?);
+  [param('ns3::LteUeCmacSapProvider *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16406: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteUeCphySapProvider (params?);
+  [param('ns3::LteUeCphySapProvider *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16410: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteUeRrcSapUser (params?);
+  [param('ns3::LteUeRrcSapUser *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16440: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLteUeRrcSapUser (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16449: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteUeRrcSapProvider (params?);
+  [param('ns3::LteUeRrcSapProvider *', 'p')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16469: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLteUeRrcSapUser (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16478: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteUeRrcSapProvider (params?);
+  [param('ns3::LteUeRrcSapProvider *', 'p')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16903: Warning: exception TypeLookupError(['ns3::Callback< void, ns3::Ptr< ns3::NetDevice >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: retval? ???::RegisterDeviceAdditionListener (params?);
+  [param('ns3::Callback< void, ns3::Ptr< ns3::NetDevice >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >', 'listener')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:16911: Warning: exception TypeLookupError(['ns3::Callback< void, ns3::Ptr< ns3::NetDevice >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: retval? ???::UnregisterDeviceAdditionListener (params?);
+  [param('ns3::Callback< void, ns3::Ptr< ns3::NetDevice >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >', 'listener')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17022: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0xc4acfec>
+  cls.add_constructor([param('uint8_t const *', 'buffer'), param('uint32_t', 'size'), param('bool', 'magic')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17024: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0xc4b002c>
+  cls.add_constructor([param('uint8_t const *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17065: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyData (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17070: Warning: exception TypeLookupError(['std::ostream *'],) in wrapper public: retval? ???::CopyData (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17125: Warning: exception TypeLookupError(['uint8_t *'],) in wrapper public: retval? ???::PeekData (params?) const;
+  deprecated=True, is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17144: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17149: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::PrintByteTags (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17154: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::PrintPacketTags (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17191: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Serialize (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17255: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: virtual retval? ???::GetFfMacCschedSapProvider (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17260: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: virtual retval? ???::GetFfMacSchedSapProvider (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17270: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::SetFfMacCschedSapUser (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17275: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::SetFfMacSchedSapUser (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17496: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: virtual retval? ???::GetFfMacCschedSapProvider (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17501: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: virtual retval? ???::GetFfMacSchedSapProvider (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17511: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::SetFfMacCschedSapUser (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17516: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::SetFfMacSchedSapUser (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17698: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::RarLteControlMessage::Rar >'],) in wrapper public: retval? ???::RarListBegin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17703: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::RarLteControlMessage::Rar >'],) in wrapper public: retval? ???::RarListEnd (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17768: Warning: exception TypeLookupError(['ns3::Ptr< ns3::AntennaModel >', 'ns3::AntennaModel *'],) in wrapper public: virtual retval? ???::GetRxAntenna (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17810: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: virtual retval? ???::GetFfMacCschedSapProvider (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17815: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: virtual retval? ???::GetFfMacSchedSapProvider (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17825: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::SetFfMacCschedSapUser (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17830: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::SetFfMacSchedSapUser (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17855: Warning: exception TypeConfigurationError('transfer_ownership parameter was not given',) in wrapper protected: retval? ???::DeserializeDrbToAddModList (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17860: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper protected: retval? ???::DeserializeLogicalChannelConfig (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17865: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper protected: retval? ???::DeserializeMeasConfig (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17870: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper protected: retval? ???::DeserializeMeasResults (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17875: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper protected: retval? ???::DeserializePhysicalConfigDedicated (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17885: Warning: exception TypeConfigurationError('direction not given',) in wrapper protected: retval? ???::DeserializeQoffsetRange (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17890: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper protected: retval? ???::DeserializeRachConfigCommon (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17895: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper protected: retval? ???::DeserializeRadioResourceConfigCommon (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17900: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper protected: retval? ???::DeserializeRadioResourceConfigCommonSib (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17905: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper protected: retval? ???::DeserializeRadioResourceConfigDedicated (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17910: Warning: exception TypeConfigurationError('transfer_ownership parameter was not given',) in wrapper protected: retval? ???::DeserializeSrbToAddModList (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17915: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper protected: retval? ???::DeserializeSystemInformationBlockType1 (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17920: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper protected: retval? ???::DeserializeSystemInformationBlockType2 (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17925: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper protected: retval? ???::DeserializeThresholdEutra (params?);
+  visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17945: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper protected: retval? ???::Print (params?) const;
+  is_const=True, visibility='protected')
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18042: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18074: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18106: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18138: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18160: Warning: exception TypeLookupError(['ns3::Ptr< ns3::PropagationLossModel >', 'ns3::PropagationLossModel *'],) in wrapper public: virtual retval? ???::AddPropagationLossModel (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18180: Warning: exception TypeLookupError(['ns3::Ptr< ns3::PropagationDelayModel >', 'ns3::PropagationDelayModel *'],) in wrapper public: virtual retval? ???::SetPropagationDelayModel (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18253: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: virtual retval? ???::GetFfMacCschedSapProvider (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18258: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: virtual retval? ???::GetFfMacSchedSapProvider (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18268: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::SetFfMacCschedSapUser (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18273: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::SetFfMacSchedSapUser (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18294: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: virtual retval? ???::GetFfMacCschedSapProvider (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18299: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: virtual retval? ???::GetFfMacSchedSapProvider (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18309: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::SetFfMacCschedSapUser (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18314: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::SetFfMacSchedSapUser (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18335: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: virtual retval? ???::GetFfMacCschedSapProvider (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18340: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: virtual retval? ???::GetFfMacSchedSapProvider (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18350: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::SetFfMacCschedSapUser (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18355: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::SetFfMacSchedSapUser (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18409: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: virtual retval? ???::GetFfMacCschedSapProvider (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18414: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: virtual retval? ???::GetFfMacSchedSapProvider (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18424: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::SetFfMacCschedSapUser (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18429: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::SetFfMacSchedSapUser (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18875: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: virtual retval? ???::GetFfMacCschedSapProvider (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18880: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: virtual retval? ???::GetFfMacSchedSapProvider (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18890: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::SetFfMacCschedSapUser (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18895: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::SetFfMacSchedSapUser (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18916: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: virtual retval? ???::GetFfMacCschedSapProvider (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18921: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: virtual retval? ???::GetFfMacSchedSapProvider (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18931: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::SetFfMacCschedSapUser (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18936: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::SetFfMacSchedSapUser (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18957: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: virtual retval? ???::GetFfMacCschedSapProvider (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18962: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: virtual retval? ???::GetFfMacSchedSapProvider (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18972: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::SetFfMacCschedSapUser (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:18977: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: virtual retval? ???::SetFfMacSchedSapUser (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:19013: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:19164: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLteEnbCphySapProvider (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:19168: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::GetLteEnbPhySapProvider (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:19246: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteEnbCphySapUser (params?);
+  [param('ns3::LteEnbCphySapUser *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:19250: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::SetLteEnbPhySapUser (params?);
+  [param('ns3::LteEnbPhySapUser *', 's')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:19540: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:19576: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:19666: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:19702: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:19743: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:19774: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:19815: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:19846: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:19877: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:19903: Warning: exception TypeLookupError(['std::bitset< 8u >'],) in wrapper public: retval? ???::GetMmec (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:19908: Warning: exception TypeLookupError(['std::bitset< 32u >'],) in wrapper public: retval? ???::GetMtmsi (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:19923: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:19959: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:20025: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:20124: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< ns3::Ptr< ns3::Object > const, std::vector< ns3::Ptr< ns3::Object > > >'],) in wrapper public: retval? ???::Begin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:20145: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< ns3::Ptr< ns3::Object > const, std::vector< ns3::Ptr< ns3::Object > > >'],) in wrapper public: retval? ???::End (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:20220: Warning: exception TypeLookupError(['ns3::Hash::Hash32Function_ptr'],) in wrapper <pybindgen.cppmethod.CppConstructor object at 0xcb402ac>
+  cls.add_constructor([param('ns3::Hash::Hash32Function_ptr', 'hp')])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:20237: Warning: exception TypeLookupError(['ns3::Hash::Hash64Function_ptr'],) in wrapper <pybindgen.cppmethod.CppConstructor object at 0xcb434ac>
+  cls.add_constructor([param('ns3::Hash::Hash64Function_ptr', 'hp')])
+/home/chris/git/NS3-simulation/pybindgen-0.16.0.831/pybindgen/cppclass_typehandlers.py:1098: UserWarning: Returning shared pointers is dangerous!  The C++ API should be redesigned to avoid this situation.
+  warnings.warn("Returning shared pointers is dangerous!"
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:19357: Warning: exception NotSupportedError('Reverse wrappers for ns3::Callback<...> types (python using callbacks defined in C++) not implemented.',) in wrapper public: virtual void ns3::LteNetDevice::AddLinkChangeCallback (ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty > callback);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:19402: Warning: exception NotSupportedError('Reverse wrappers for ns3::Callback<...> types (python using callbacks defined in C++) not implemented.',) in wrapper public: virtual void ns3::LteNetDevice::SetReceiveCallback (ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty > cb);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:19417: Warning: exception NotSupportedError('Reverse wrappers for ns3::Callback<...> types (python using callbacks defined in C++) not implemented.',) in wrapper public: virtual void ns3::LteNetDevice::SetPromiscReceiveCallback (ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty > cb);
+  is_virtual=True)
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception NotSupportedError('Reverse wrappers for ns3::Callback<...> types (python using callbacks defined in C++) not implemented.',) in wrapper public: virtual void ns3::LteNetDevice::AddLinkChangeCallback (ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty > callback);
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception NotSupportedError('Reverse wrappers for ns3::Callback<...> types (python using callbacks defined in C++) not implemented.',) in wrapper public: virtual void ns3::LteNetDevice::SetPromiscReceiveCallback (ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty > cb);
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception NotSupportedError('Reverse wrappers for ns3::Callback<...> types (python using callbacks defined in C++) not implemented.',) in wrapper public: virtual void ns3::LteNetDevice::SetReceiveCallback (ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty > cb);
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::EpcEnbS1SapProvider cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::EpcEnbS1SapProvider'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::EpcEnbS1SapUser cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::EpcEnbS1SapUser'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::EpcS11SapMme cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::EpcS11SapMme'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::EpcS11SapSgw cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::EpcS11SapSgw'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::EpcS1apSapEnb cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::EpcS1apSapEnb'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::EpcS1apSapMme cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::EpcS1apSapMme'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::EpcX2SapProvider cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::EpcX2SapProvider'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::EpcX2SapUser cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::EpcX2SapUser'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::FfMacCschedSapProvider cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::FfMacCschedSapProvider'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::FfMacCschedSapUser cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::FfMacCschedSapUser'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::FfMacSchedSapProvider cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::FfMacSchedSapProvider'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::FfMacSchedSapUser cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::FfMacSchedSapUser'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteAsSapProvider cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::LteAsSapProvider'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteAsSapUser cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::LteAsSapUser'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteEnbCmacSapProvider cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::LteEnbCmacSapProvider'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteEnbCmacSapUser cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::LteEnbCmacSapUser'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteEnbCphySapProvider cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::LteEnbCphySapProvider'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteEnbPhySapProvider cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::LteEnbPhySapProvider'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteEnbPhySapUser cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::LteEnbPhySapUser'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteGlobalPathlossDatabase cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::LteGlobalPathlossDatabase'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteMacSapProvider cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::LteMacSapProvider'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteMacSapUser cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::LteMacSapUser'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LtePdcpSapProvider cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::LtePdcpSapProvider'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LtePdcpSapUser cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::LtePdcpSapUser'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteRlcSapProvider cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::LteRlcSapProvider'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteRlcSapUser cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::LteRlcSapUser'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteUeCmacSapProvider cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::LteUeCmacSapProvider'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteUeCmacSapUser cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::LteUeCmacSapUser'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteUeCphySapProvider cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::LteUeCphySapProvider'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteUeCphySapUser cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::LteUeCphySapUser'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteUePhySapProvider cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::LteUePhySapProvider'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteUePhySapUser cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::LteUePhySapUser'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteUeRrcSapProvider cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::LteUeRrcSapProvider'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteUeRrcSapUser cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::LteUeRrcSapUser'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteEnbRrcSapProvider cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::LteEnbRrcSapProvider'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteEnbRrcSapUser cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::LteEnbRrcSapUser'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::Asn1Header cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::Asn1Header'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::FfMacScheduler cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::FfMacScheduler'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LtePhy cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::LtePhy'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteRlc cannot be constructed (class has pure virtual methods)',) in wrapper <pybindgen.CppClass 'ns3::LteRlc'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::LteSinrChunkProcessor cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::LteSinrChunkProcessor'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17376: Warning: exception SkipWrapper('overloading: removed the wrapper public: void ns3::PhyStatsCalculator::ReportUeSinr (ns3::Ptr< ns3::PhyStatsCalculator > phyStats, std::string path, uint16_t cellId, uint16_t rnti, double sinrLinear); because its method flags are different from existing ones.',) in wrapper public: void ns3::PhyStatsCalculator::ReportUeSinr (ns3::Ptr< ns3::PhyStatsCalculator > phyStats, std::string path, uint16_t cellId, uint16_t rnti, double sinrLinear);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:17367: Warning: exception SkipWrapper('overloading: removed the wrapper public: void ns3::PhyStatsCalculator::ReportInterference (ns3::Ptr< ns3::PhyStatsCalculator > phyStats, std::string path, uint16_t cellId, ns3::Ptr< ns3::SpectrumValue > interference); because its method flags are different from existing ones.',) in wrapper public: void ns3::PhyStatsCalculator::ReportInterference (ns3::Ptr< ns3::PhyStatsCalculator > phyStats, std::string path, uint16_t cellId, ns3::Ptr< ns3::SpectrumValue > interference);
+  is_static=True)
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception CodeGenerationError('ns3::RrcAsn1Header cannot be constructed (have pure virtual methods but no helper class)',) in wrapper <pybindgen.CppClass 'ns3::RrcAsn1Header'>
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:2064: Warning: exception NotSupportedError('Reverse wrappers for ns3::Callback<...> types (python using callbacks defined in C++) not implemented.',) in wrapper public: virtual void ns3::LteNetDevice::AddLinkChangeCallback (ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty > callback);
+  register_Ns3LteNetDevice_methods(root_module, root_module['ns3::LteNetDevice'])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:2064: Warning: exception NotSupportedError('Reverse wrappers for ns3::Callback<...> types (python using callbacks defined in C++) not implemented.',) in wrapper public: virtual void ns3::LteNetDevice::SetReceiveCallback (ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty > cb);
+  register_Ns3LteNetDevice_methods(root_module, root_module['ns3::LteNetDevice'])
+/home/chris/git/NS3-simulation/ns-3.18/src/lte/bindings/modulegen__gcc_ILP32.py:2064: Warning: exception NotSupportedError('Reverse wrappers for ns3::Callback<...> types (python using callbacks defined in C++) not implemented.',) in wrapper public: virtual void ns3::LteNetDevice::SetPromiscReceiveCallback (ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty > cb);
+  register_Ns3LteNetDevice_methods(root_module, root_module['ns3::LteNetDevice'])

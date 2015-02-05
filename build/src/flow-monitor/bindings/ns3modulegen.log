@@ -1,0 +1,210 @@
+>>>>>>>>>>>>>>>> [['void', 'ns3::Ptr<ns3::Socket>', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['void', 'ns3::Ptr<ns3::Socket>', 'unsigned int', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['void', 'ns3::Ptr<ns3::Socket>', 'ns3::Address const&', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['bool', 'ns3::Ptr<ns3::Socket>', 'ns3::Address const&', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty', 'ns3::empty'], ['void', 'ns3::Ptr<ns3::NetDevice>', 'ns3::Ptr<ns3::Packet const>', 'unsigned short', 'ns3::Address const&', 'ns3::Address const&', 'ns3::NetDevice::PacketType', 'ns3::empty', 'ns3::empty', 'ns3::empty']]
+***** registering callback handler: 'ns3::Callback< void, ns3::Ptr< ns3::Socket >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< void, ns3::Ptr< ns3::Socket >, unsigned int, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< void, ns3::Ptr< ns3::Socket >, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< bool, ns3::Ptr< ns3::Socket >, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'
+***** registering callback handler: 'ns3::Callback< void, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >'
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:532: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x90df22c>
+  cls.add_constructor([param('uint8_t', 'type'), param('uint8_t const *', 'buffer'), param('uint8_t', 'len')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:543: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyAllFrom (params?);
+  [param('uint8_t const *', 'buffer'), param('uint8_t', 'len')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:548: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyAllTo (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:552: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyFrom (params?);
+  [param('uint8_t const *', 'buffer'), param('uint8_t', 'len')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:557: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyTo (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:607: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::AttributeConstructionList::Item >'],) in wrapper public: retval? ???::Begin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:612: Warning: exception TypeLookupError(['std::_List_const_iterator< ns3::AttributeConstructionList::Item >'],) in wrapper public: retval? ???::End (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:663: Warning: exception TypeLookupError(['std::ostream *'],) in wrapper public: retval? ???::CopyData (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:668: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyData (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:682: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Deserialize (params?);
+  [param('uint8_t const *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:712: Warning: exception TypeLookupError(['uint8_t *'],) in wrapper public: retval? ???::PeekData (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:725: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Serialize (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:780: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Read (params?);
+  [param('uint8_t *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:824: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Write (params?);
+  [param('uint8_t const *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1010: Warning: exception TypeLookupError(['ns3::Ptr< ns3::EventImpl > &'],) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x920e26c>
+  cls.add_constructor([param('ns3::Ptr< ns3::EventImpl > const &', 'impl'), param('uint64_t', 'ts'), param('uint32_t', 'context'), param('uint32_t', 'uid')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1044: Warning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper public: retval? ???::PeekEventImpl (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1144: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::SerializeToXmlStream (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1313: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Deserialize (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1378: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1383: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Serialize (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1511: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1528: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x930344c>
+  cls.add_constructor([param('uint8_t *', 'address')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1546: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Deserialize (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1571: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::GetBytes (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1660: Warning: exception TypeLookupError(['ns3::Mac16Address'],) in wrapper public: retval? ???::MakeAutoconfiguredAddress (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1665: Warning: exception TypeLookupError(['ns3::Mac48Address'],) in wrapper public: retval? ???::MakeAutoconfiguredAddress (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1670: Warning: exception TypeLookupError(['ns3::Mac64Address'],) in wrapper public: retval? ???::MakeAutoconfiguredAddress (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1675: Warning: exception TypeLookupError(['ns3::Mac16Address'],) in wrapper public: retval? ???::MakeAutoconfiguredLinkLocalAddress (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1680: Warning: exception TypeLookupError(['ns3::Mac48Address'],) in wrapper public: retval? ???::MakeAutoconfiguredLinkLocalAddress (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1685: Warning: exception TypeLookupError(['ns3::Mac64Address'],) in wrapper public: retval? ???::MakeAutoconfiguredLinkLocalAddress (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1700: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1705: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Serialize (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1713: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Set (params?);
+  [param('uint8_t *', 'address')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1778: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x936ceec>
+  cls.add_constructor([param('uint8_t *', 'prefix')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1791: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::GetBytes (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1826: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1862: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< ns3::Ptr< ns3::Node > const, std::vector< ns3::Ptr< ns3::Node > > >'],) in wrapper public: retval? ???::Begin (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1875: Warning: exception TypeLookupError(['__gnu_cxx::__normal_iterator< ns3::Ptr< ns3::Node > const, std::vector< ns3::Ptr< ns3::Node > > >'],) in wrapper public: retval? ???::End (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:1963: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::Delete (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:2036: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Deserialize (params?);
+  [param('uint8_t const *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:2077: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Serialize (params?) const;
+  is_const=True)
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception TypeLookupError(['uint8_t [ 20 ]'],) in wrapper None
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception TypeConfigurationError('Either caller_owns_return or self.reference_existing_object must be given',) in wrapper None
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:2232: Warning: exception TypeLookupError(['ns3::Ptr< ns3::SimulatorImpl >', 'ns3::SimulatorImpl *'],) in wrapper public: retval? ???::GetImplementation (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:2267: Warning: exception TypeLookupError(['ns3::Ptr< ns3::SimulatorImpl >', 'ns3::SimulatorImpl *'],) in wrapper public: retval? ???::SetImplementation (params?);
+  is_static=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:2309: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:2321: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x94b1b2c>
+  cls.add_constructor([param('uint8_t *', 'start'), param('uint8_t *', 'end')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:2329: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Read (params?);
+  [param('uint8_t *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:2357: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Write (params?);
+  [param('uint8_t const *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:2506: Warning: exception TypeLookupError(['ns3::Callback< ns3::ObjectBase *, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: retval? ???::GetConstructor (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:2585: Warning: exception TypeConfigurationError('Missing transfer_ownership option',) in wrapper public: retval? ???::LookupByHashFailSafe (params?);
+  is_static=True)
+bindings/python/ns3modulegen-modular.py:27: UserWarning: exception TypeLookupError(['short unsigned int'],) in wrapper None
+  warnings.warn("exception %r in wrapper %s" % (exception, wrapper))
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:2786: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:2814: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:2930: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:3058: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:3462: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Recv (params?);
+  [param('uint8_t *', 'buf'), param('uint32_t', 'size'), param('uint32_t', 'flags')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:3475: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::RecvFrom (params?);
+  [param('uint8_t *', 'buf'), param('uint32_t', 'size'), param('uint32_t', 'flags'), param('ns3::Address &', 'fromAddress')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:3488: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Send (params?);
+  [param('uint8_t const *', 'buf'), param('uint32_t', 'size'), param('uint32_t', 'flags')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:3497: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::SendTo (params?);
+  [param('uint8_t const *', 'buf'), param('uint32_t', 'size'), param('uint32_t', 'flags'), param('ns3::Address const &', 'address')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:3681: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:3727: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:3773: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:3819: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:3865: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:3919: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:4150: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::Print (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:4349: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::SerializeToXmlStream (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:4417: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::SerializeToXmlStream (params?);
+  [param('std::ostream &', 'os'), param('int', 'indent'), param('bool', 'enableHistograms'), param('bool', 'enableProbes')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:4517: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::SerializeToXmlStream (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:4554: Warning: exception TypeLookupError(['ns3::Callback< void, ns3::Ptr< ns3::Packet >, ns3::Ipv4Address, ns3::Ipv4Address, unsigned char, ns3::Ptr< ns3::Ipv4Route >, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: virtual retval? ???::GetDownTarget (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:4559: Warning: exception TypeLookupError(['ns3::Callback< void, ns3::Ptr< ns3::Packet >, ns3::Ipv6Address, ns3::Ipv6Address, unsigned char, ns3::Ptr< ns3::Ipv6Route >, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: virtual retval? ???::GetDownTarget6 (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:4574: Warning: exception TypeLookupError(['ns3::Ptr< ns3::Ipv4Interface >', 'ns3::Ipv4Interface *'],) in wrapper public: virtual retval? ???::Receive (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:4584: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: virtual retval? ???::ReceiveIcmp (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:4589: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: virtual retval? ???::ReceiveIcmp (params?);
+  is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:4594: Warning: exception TypeLookupError(['ns3::Callback< void, ns3::Ptr< ns3::Packet >, ns3::Ipv4Address, ns3::Ipv4Address, unsigned char, ns3::Ptr< ns3::Ipv4Route >, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: virtual retval? ???::SetDownTarget (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:4599: Warning: exception TypeLookupError(['ns3::Callback< void, ns3::Ptr< ns3::Packet >, ns3::Ipv6Address, ns3::Ipv6Address, unsigned char, ns3::Ptr< ns3::Ipv6Route >, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: virtual retval? ???::SetDownTarget6 (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:4837: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: virtual retval? ???::SerializeToXmlStream (params?) const;
+  is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:4901: Warning: exception TypeLookupError(['ns3::Ptr< ns3::Ipv4Interface >', 'ns3::Ipv4Interface *'],) in wrapper public: retval? ???::GetInterface (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:5252: Warning: exception TypeLookupError(['ns3::Callback< void, ns3::Ptr< ns3::Ipv4Route >, ns3::Ptr< ns3::Packet const >, ns3::Ipv4Header const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: virtual retval? ???::RouteInput (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:5499: Warning: exception TypeLookupError(['ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: virtual retval? ???::AddLinkChangeCallback (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:5514: Warning: exception TypeLookupError(['ns3::Ptr< ns3::Channel >', 'ns3::Channel *'],) in wrapper public: virtual retval? ???::GetChannel (params?) const = 0;
+  is_pure_virtual=True, is_const=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:5609: Warning: exception TypeLookupError(['ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, short unsigned int, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: virtual retval? ???::SetPromiscReceiveCallback (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:5614: Warning: exception TypeLookupError(['ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, short unsigned int, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: virtual retval? ???::SetReceiveCallback (params?) = 0;
+  is_pure_virtual=True, is_virtual=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:5676: Warning: exception TypeLookupError(['ns3::Ptr< ns3::Application >', 'ns3::Application *'],) in wrapper public: retval? ???::AddApplication (params?);
+  [param('ns3::Ptr< ns3::Application >', 'application')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:5690: Warning: exception TypeLookupError(['ns3::Ptr< ns3::Application >', 'ns3::Application *'],) in wrapper public: retval? ???::GetApplication (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:5724: Warning: exception TypeLookupError(['ns3::Callback< void, ns3::Ptr< ns3::NetDevice >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: retval? ???::RegisterDeviceAdditionListener (params?);
+  [param('ns3::Callback< void, ns3::Ptr< ns3::NetDevice >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >', 'listener')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:5732: Warning: exception TypeLookupError(['ns3::Callback< void, ns3::Ptr< ns3::NetDevice >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >'],) in wrapper public: retval? ???::UnregisterDeviceAdditionListener (params?);
+  [param('ns3::Callback< void, ns3::Ptr< ns3::NetDevice >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >', 'listener')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:5795: Warning: exception TypeLookupError(['std::ostream *'],) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x9cef3ac>
+  cls.add_constructor([param('std::ostream *', 'os')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:5799: Warning: exception TypeLookupError(['std::ostream *'],) in wrapper public: retval? ???::GetStream (params?);
+  [])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:5811: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x9c8240c>
+  cls.add_constructor([param('uint8_t const *', 'buffer'), param('uint32_t', 'size'), param('bool', 'magic')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:5813: Warning: exception TypeConfigurationError('direction not given',) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x9c8244c>
+  cls.add_constructor([param('uint8_t const *', 'buffer'), param('uint32_t', 'size')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:5854: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::CopyData (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:5859: Warning: exception TypeLookupError(['std::ostream *'],) in wrapper public: retval? ???::CopyData (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:5914: Warning: exception TypeLookupError(['uint8_t *'],) in wrapper public: retval? ???::PeekData (params?) const;
+  deprecated=True, is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:5933: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::Print (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:5938: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::PrintByteTags (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:5943: Warning: exception TypeLookupError(['std::ostream &'],) in wrapper public: retval? ???::PrintPacketTags (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:5980: Warning: exception TypeConfigurationError('direction not given',) in wrapper public: retval? ???::Serialize (params?) const;
+  is_const=True)
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:6148: Warning: exception TypeLookupError(['ns3::Hash::Hash32Function_ptr'],) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x9d798cc>
+  cls.add_constructor([param('ns3::Hash::Hash32Function_ptr', 'hp')])
+/home/chris/git/NS3-simulation/ns-3.18/src/flow-monitor/bindings/modulegen__gcc_ILP32.py:6165: Warning: exception TypeLookupError(['ns3::Hash::Hash64Function_ptr'],) in wrapper <pybindgen.cppmethod.CppConstructor object at 0x9d7dacc>
+  cls.add_constructor([param('ns3::Hash::Hash64Function_ptr', 'hp')])
+/home/chris/git/NS3-simulation/pybindgen-0.16.0.831/pybindgen/cppclass_typehandlers.py:1098: UserWarning: Returning shared pointers is dangerous!  The C++ API should be redesigned to avoid this situation.
+  warnings.warn("Returning shared pointers is dangerous!"

@@ -425,15 +425,14 @@ std::string i2s(uint i) {
 }
 
 /*-------------------------------By Zhiyong-----------------------------------------------------*/
-uint32_t PointToPointNetDevice::NormalForwarding_FatTree(NodeId nodeId,IdTag dstId, IdTag turningId, uint iif)
-{ // judge the upstream and downstream by dstId and srcId instead of iif.
+uint32_t PointToPointNetDevice::NormalForwarding_FatTree(NodeId nodeId,
+		IdTag dstId, IdTag turningId, uint iif) { // judge the upstream and downstream by dstId and srcId instead of iif.
 
 	uint32_t oif = 0;  // output interface?  iif=input interface?
 
 	/*---------------------------algorithm corrected by Chunzhi-------------------------------------*/
 	/*-----------------------------Simplified by Zhang Xin------------------------------------*/
-	if (nodeId.id_level == turningId.id_level)
-	{ // Start to perform the switching at the turning switch, which could be happened at any switch level
+	if (nodeId.id_level == turningId.id_level) { // Start to perform the switching at the turning switch, which could be happened at any switch level
 		switch (nodeId.id_level) {
 		case 0: // core switch
 			oif = dstId.id_pod + 1;
@@ -454,7 +453,7 @@ uint32_t PointToPointNetDevice::NormalForwarding_FatTree(NodeId nodeId,IdTag dst
 
 	assert(nodeId.id_level > turningId.id_level); //packet arrived at aggregate switches or edge switches
 
-	if (iif >= 1 && iif <= Port_num / 2) {// upstream routing. iif <= Port_num / 2
+	if (iif >= 1 && iif <= Port_num / 2) { // upstream routing. iif <= Port_num / 2
 		uint offset = 0;
 		switch (nodeId.id_level) {
 		case 2:
@@ -464,13 +463,14 @@ uint32_t PointToPointNetDevice::NormalForwarding_FatTree(NodeId nodeId,IdTag dst
 			offset = turningId.id_switch;
 			break;
 		default:
-			std::cout<< "Algorithm wrong in point-to-point-net-device.cc NormalForwarding_FatTree \n";
+			std::cout
+					<< "Algorithm wrong in point-to-point-net-device.cc NormalForwarding_FatTree \n";
 		}
 		oif = offset + 1 + Port_num / 2;
 		return oif;
 	}
 
-    // downstram iif > Port_num / 2
+	// downstram iif > Port_num / 2
 	switch (nodeId.id_level) {
 	case 1:
 		oif = dstId.id_switch + 1;
@@ -487,7 +487,7 @@ uint32_t PointToPointNetDevice::NormalForwarding_FatTree(NodeId nodeId,IdTag dst
 	assert(1 <= oif && oif <= Port_num);
 	return oif;
 }
-	/*-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
 //
 //	if (nodeId.id_level == turningId.id_level) { // Start to perform downstream routing.
 //		switch (nodeId.id_level) {
@@ -575,9 +575,9 @@ uint32_t PointToPointNetDevice::NormalForwarding_FatTree(NodeId nodeId,IdTag dst
 //					<< std::endl;
 //		}
 //	}
-
-bool PointToPointNetDevice::IsForwarding_FatTree(NodeId nodeId, IdTag dstId,uint32_t iif) {
-	if (nodeId.id_level == 0) {// packet arriving at core switch
+bool PointToPointNetDevice::IsForwarding_FatTree(NodeId nodeId, IdTag dstId,
+		uint32_t iif) {
+	if (nodeId.id_level == 0) { // packet arriving at core switch
 		if ((iif - 1) == dstId.id_pod) { // packet comes in from the pre-designed output port, it is a backtracking packet.
 			return false;
 		} else
@@ -590,8 +590,8 @@ bool PointToPointNetDevice::IsForwarding_FatTree(NodeId nodeId, IdTag dstId,uint
 		return true;
 }
 
-bool PointToPointNetDevice::IsNotFailure_FatTree(NodeId nodeId, uint32_t normalOif)
-{
+bool PointToPointNetDevice::IsNotFailure_FatTree(NodeId nodeId,
+		uint32_t normalOif) {
 	std::string failNodeKey = nodeId.toString();
 	if (FailNode_oif_map.find(failNodeKey) != FailNode_oif_map.end()
 			&& (FailNode_oif_map[failNodeKey] == normalOif)) {
@@ -648,7 +648,7 @@ uint32_t PointToPointNetDevice::FindRecoveryPort(uint32_t normal_oif) {
 		oif = normal_oif + 1;
 		if (oif > Port_num) {
 			//oif = Port_num / 2;
-			oif=Port_num/2+1; //edit by Zhang Xin
+			oif = Port_num / 2 + 1; //edit by Zhang Xin
 		}
 		assert(oif >= Port_num / 2 + 1 && oif <= Port_num);
 	}
@@ -671,16 +671,16 @@ void PointToPointNetDevice::UpdateTurningSW(Ptr<Packet> packet, uint oif) {
 
 	assert(nodeId.id_level > original_turningId.id_level);
 
-/*	if (isLRD) {
-		// use a local level-1 switch as the turning switch for re-routing
-		if (nodeId.id_level == 2) {
-			newTurningId.id_level = nodeId.id_level - 1;
-			newTurningId.id_pod = nodeId.id_pod;
-			newTurningId.id_switch = nodeId.id_switch;
-		}
-		packet->AddPacketTag(newTurningId);
-		return;
-	}*/
+	/*	if (isLRD) {
+	 // use a local level-1 switch as the turning switch for re-routing
+	 if (nodeId.id_level == 2) {
+	 newTurningId.id_level = nodeId.id_level - 1;
+	 newTurningId.id_pod = nodeId.id_pod;
+	 newTurningId.id_switch = nodeId.id_switch;
+	 }
+	 packet->AddPacketTag(newTurningId);
+	 return;
+	 }*/
 
 	if (original_turningId.id_level == 0) {
 		if (nodeId.id_level == 1) {
@@ -696,36 +696,37 @@ void PointToPointNetDevice::UpdateTurningSW(Ptr<Packet> packet, uint oif) {
 	newTurningId.id_switch = oif - Port_num / 2 - 1;
 
 	assert(newTurningId.id_level == original_turningId.id_level);
-	assert( (newTurningId.id_pod != original_turningId.id_pod)
-			|| (newTurningId.id_switch != original_turningId.id_switch));
+	assert(
+			(newTurningId.id_pod != original_turningId.id_pod)
+					|| (newTurningId.id_switch != original_turningId.id_switch));
 
 	packet->AddPacketTag(newTurningId);
-	return ;
+	return;
 }
 
-uint32_t PointToPointNetDevice::Forwarding_FatTree(Ptr<Packet> packet,uint32_t iif) {
+uint32_t PointToPointNetDevice::Forwarding_FatTree(Ptr<Packet> packet,
+		uint32_t iif) {
 	assert(iif >= 1 && iif <= Port_num);
 	uint32_t oif = 0;
 	SrcIdTag srcId;
 	if (!packet->PeekPacketTag(srcId)) {
-		std::cout<<"packet lacks srcId tag";
+		std::cout << "packet lacks srcId tag";
 		return 0;
 	}
 	DstIdTag dstId;
-	if (!packet->PeekPacketTag(dstId)){
-		std::cout<<"packet lacks dstId tag";
+	if (!packet->PeekPacketTag(dstId)) {
+		std::cout << "packet lacks dstId tag";
 		return 0;
 	}
 	TurningIdTag turningId;
-	if (!packet->PeekPacketTag(turningId)){
-		std::cout<<"packet lacks trurningId tag";
+	if (!packet->PeekPacketTag(turningId)) {
+		std::cout << "packet lacks trurningId tag";
 		return 0;
 	}
 	NodeId nodeId = this->GetNode()->nodeId_FatTree;
 
-
-	if (nodeId.id_level == turningId.id_level && nodeId.toString() != turningId.toString())
-	{// Raise error for incorrectly routing.
+	if (nodeId.id_level == turningId.id_level
+			&& nodeId.toString() != turningId.toString()) { // Raise error for incorrectly routing.
 		std::cout << "Wrong turning switch!!! Expected = "
 				<< turningId.toString() << ", Got = " << nodeId.toString()
 				<< ", for flow: " << srcId.toString() << "->"
@@ -734,32 +735,30 @@ uint32_t PointToPointNetDevice::Forwarding_FatTree(Ptr<Packet> packet,uint32_t i
 		return 0;
 	}
 
-
-
-   /* *
-    * Down link is unique in a fat-tree topology.
-    * Therefore the turning switch with the destination can identify if this down link go through
-    * the failure link.
-    * */
+	/* *
+	 * Down link is unique in a fat-tree topology.
+	 * Therefore the turning switch with the destination can identify if this down link go through
+	 * the failure link.
+	 * */
 	std::string reRoutingKey = dstId.toString() + turningId.toString();
-    // Must use pointer to refer to the SAME map! Otherwise it's just a copy of the original map.
-	std::map<std::string, uint32_t>* reRoutingMap = &this->GetNode()->reRoutingMap;
+	// Must use pointer to refer to the SAME map! Otherwise it's just a copy of the original map.
+	std::map<std::string, uint32_t>* reRoutingMap =
+			&this->GetNode()->reRoutingMap;
 
-/**************************** Start Edition by Zhang Xin   ***************************/
-	bool isForwarding=IsForwarding_FatTree(nodeId, dstId, iif);
-	if (isForwarding){// Choose the oif according to either the re-routing pattern or routing pattern
-		if (reRoutingMap->find(reRoutingKey)!=reRoutingMap->end()){//Following the existing reRouting pattern
-			oif=(*reRoutingMap)[reRoutingKey];
-			UpdateTurningSW(packet,oif);
-		}
-		else{ //Following the normal routing pattern
-			oif=NormalForwarding_FatTree(nodeId,dstId,turningId,iif);
+	/**************************** Start Edition by Zhang Xin   ***************************/
+	bool isForwarding = IsForwarding_FatTree(nodeId, dstId, iif);
+	if (isForwarding) { // Choose the oif according to either the re-routing pattern or routing pattern
+		if (reRoutingMap->find(reRoutingKey) != reRoutingMap->end()) { //Following the existing reRouting pattern
+			oif = (*reRoutingMap)[reRoutingKey];
+			UpdateTurningSW(packet, oif);
+		} else { //Following the normal routing pattern
+			oif = NormalForwarding_FatTree(nodeId, dstId, turningId, iif);
 		}
 	}
 
-	bool isNormal= isForwarding && IsNotFailure_FatTree(nodeId,oif);
-	if (nodeId.id_pod==dstId.id_pod)
-		isNormal=isNormal && IsDestReachable(nodeId, dstId);
+	bool isNormal = isForwarding && IsNotFailure_FatTree(nodeId, oif);
+	if (nodeId.id_pod == dstId.id_pod)
+		isNormal = isNormal && IsDestReachable(nodeId, dstId);
 
 	if (isNormal)
 		return oif;
@@ -767,27 +766,27 @@ uint32_t PointToPointNetDevice::Forwarding_FatTree(Ptr<Packet> packet,uint32_t i
 	/*
 	 * For link failures and redirected packets (v-turn or backtracking).
 	 * */
-	if (isLRD) {//Below is the LRD algorithm. We assume no failure link exists between core and aggregate
+	if (isLRD) { //Below is the LRD algorithm. We assume no failure link exists between core and aggregate
 		/*
 		 * In LRD all the packet are forwarding packets, so error can only occur while link failure
 		 * happens or destination is not reachable.
 		 * */
-		if (1==nodeId.id_level){//V-turn to another access switch
-			assert(!IsNotFailure_FatTree(nodeId,oif));//error must incurred by link failure.
-			oif=FindRecoveryPort(oif);
+		if (1 == nodeId.id_level) { //V-turn to another access switch
+			assert(!IsNotFailure_FatTree(nodeId, oif)); //error must incurred by link failure.
+			oif = FindRecoveryPort(oif);
 			(*reRoutingMap)[reRoutingKey] = oif;
 			return oif;
 		}
-		if (2==nodeId.id_level && iif<=Port_num/2){//Choose another upstream path
-			assert(!IsNotFailure_FatTree(nodeId,oif));//error must incurred by link failure.
-			oif=FindRecoveryPort(oif);
-			(*reRoutingMap)[reRoutingKey]= oif;
+		if (2 == nodeId.id_level && iif <= Port_num / 2) { //Choose another upstream path
+			assert(!IsNotFailure_FatTree(nodeId, oif)); //error must incurred by link failure.
+			oif = FindRecoveryPort(oif);
+			(*reRoutingMap)[reRoutingKey] = oif;
 			UpdateTurningSW(packet, oif); // update the turning switch tag
 			return oif;
 		}
-		if (2==nodeId.id_level && iif>Port_num/2){//Send packets to another aggregate switch
-			assert(!IsDestReachable(nodeId, dstId));//packet can reach the destination due to the V-turn
-			oif=FindRecoveryPort(iif);
+		if (2 == nodeId.id_level && iif > Port_num / 2) { //Send packets to another aggregate switch
+			assert(!IsDestReachable(nodeId, dstId)); //packet can reach the destination due to the V-turn
+			oif = FindRecoveryPort(iif);
 			(*reRoutingMap)[reRoutingKey] = oif;
 			std::cout << "Local rerouted packet for LRD. Add reroute path: "
 					<< reRoutingKey << "->" << oif << ", at level-"
@@ -797,69 +796,94 @@ uint32_t PointToPointNetDevice::Forwarding_FatTree(Ptr<Packet> packet,uint32_t i
 		}
 	}
 
-
-	if (!isLRD){//Below is the LRB algorithm.
+	if (!isLRD) { //Below is the LRB algorithm.
 		/***********************************************************************
 		 *****     For all the level 0 (core) switches          ***********
 		 ***********************************************************************/
-		if (0==nodeId.id_level){
+		if (0 == nodeId.id_level) {
 			//packet->PeekPacketTag(isbackId1);
 			//packet->RemovePacketTag(isbackId2);
 			//packet->AddPacketTag(isbackId2);
-			if (isForwarding){ //return this packet
-				assert(!IsNotFailure_FatTree(nodeId,oif)); // error must incurred by link failure
-				oif=iif;
-			}else{//keep backtracking
+			if (isForwarding) { //return this packet
+				assert(!IsNotFailure_FatTree(nodeId, oif)); // error must incurred by link failure
+				oif = iif;
+				std::cout << "chunzhi says: U-turn from id_level = "
+						<< nodeId.id_level << "; oif=" << oif << std::endl;
+			} else { //keep backtracking
 				oif = NormalForwarding_FatTree(nodeId, srcId, turningId, iif);
+				std::cout << "chunzhi says: keep backtracking from id_level = "
+						<< nodeId.id_level << "; oif=" << oif << std::endl;
 			}
+
 			return oif;
 		}
 		/***********************************************************************
 		 *****     For all the level 1 (aggregate) switches          ***********
 		 ***********************************************************************/
-/*		if (1==nodeId.id_level && ! isForwarding){ //keep backtracking
+		/*		if (1==nodeId.id_level && ! isForwarding){ //keep backtracking
 
-			oif = NormalForwarding_FatTree(nodeId, srcId, turningId, iif);
-			return oif;
-		}
-*/
-		if (1==nodeId.id_level && iif>Port_num/2){
-			if (!isForwarding){//keep backtracking.
+		 oif = NormalForwarding_FatTree(nodeId, srcId, turningId, iif);
+		 return oif;
+		 }
+		 */
+		if (1 == nodeId.id_level && iif > Port_num / 2) {
+			if (!isForwarding) { //keep backtracking.
 				/*
 				 * We don't consider efficient Fat-Tree at this stage
 				 * */
 				oif = NormalForwarding_FatTree(nodeId, srcId, turningId, iif);
+				std::cout << "chunzhi says: keep backtracking from id_level = "
+						<< nodeId.id_level << "; oif=" << oif << std::endl;
 				return oif;
-			}
-			else{// return this packet
-				assert(!IsNotFailure_FatTree(nodeId,oif)); // error must be incurred by link failure
-				oif=iif;
+			} else { // return this packet
+				assert(!IsNotFailure_FatTree(nodeId, oif)); // error must be incurred by link failure
+				oif = iif;
+				std::cout << "chunzhi says: U-turn from id_level = "
+						<< nodeId.id_level << "; oif=" << oif << std::endl;
 				return oif;
 			}
 		}
-		if (1==nodeId.id_level && iif<=Port_num/2){//choose another upstream path
-			assert(!IsNotFailure_FatTree(nodeId,oif)); // error must be incurred by link failure
-			oif=FindRecoveryPort(oif);
+		if (1 == nodeId.id_level && iif <= Port_num / 2) { //choose another upstream path
+			assert(!IsNotFailure_FatTree(nodeId, oif)); // error must be incurred by link failure
+			oif = FindRecoveryPort(oif);
 			UpdateTurningSW(packet, oif);
+			std::cout << "chunzhi says: Recovery Path from id_level = "
+					<< nodeId.id_level << "; oif=" << oif << std::endl;
 			return oif;
 		}
 		/***********************************************************************
 		 *****     For all the level 2 (access) switches          ***********
 		 ***********************************************************************/
-		if (2==nodeId.id_level && iif>Port_num/2){
+		if (2 == nodeId.id_level && iif > Port_num / 2) {
 			assert(!isForwarding); // We assume no failure exists in links connected to servers.
-			if (iif != (*reRoutingMap)[reRoutingKey]){ //Following the existing re-routing pattern
-				oif=(*reRoutingMap)[reRoutingKey];
+
+			// Commented by Chunzhi: the reRoutingKey may not exist.
+			/*if (iif != (*reRoutingMap)[reRoutingKey]) { //Following the existing re-routing pattern
+			 oif = (*reRoutingMap)[reRoutingKey];
+			 return oif;
+			 }*/
+
+			/*-------------------Chunzhi---------------------------*/
+			if (reRoutingMap->find(reRoutingKey) != reRoutingMap->end()) { //Following the existing reRouting pattern
+				oif = (*reRoutingMap).at(reRoutingKey);
+				assert(iif != oif);
+				UpdateTurningSW(packet, oif);
+				std::cout << "chunzhi says: Recovery Path from id_level = "
+						<< nodeId.id_level << "; oif=" << oif << std::endl;
 				return oif;
 			}
+			/*----------------------------------------------------------*/
+
 			// Create new re-routing pattern
 			oif = FindRecoveryPort(iif);
 			UpdateTurningSW(packet, oif);
 			(*reRoutingMap)[reRoutingKey] = oif;
+			std::cout << "chunzhi says: Recovery Path from id_level = "
+					<< nodeId.id_level << "; oif=" << oif << std::endl;
 			return oif;
 		}
-		if (2==nodeId.id_level && iif <= Port_num/2){// Find another upstream path
-			assert(!IsNotFailure_FatTree(nodeId,oif));
+		if (2 == nodeId.id_level && iif <= Port_num / 2) { // Find another upstream path
+			assert(!IsNotFailure_FatTree(nodeId, oif));
 			oif = FindRecoveryPort(oif);
 			UpdateTurningSW(packet, oif);
 			(*reRoutingMap)[reRoutingKey] = oif;
@@ -868,238 +892,238 @@ uint32_t PointToPointNetDevice::Forwarding_FatTree(Ptr<Packet> packet,uint32_t i
 	}
 	return oif;
 
-/***************************************Edition by Zhang Xin End*******************************/
+	/***************************************Edition by Zhang Xin End*******************************/
 	/*if (reRoutingMap->find(reRoutingKey) != reRoutingMap->end())// Following the existing reRoutingMap to direct following packets
-	{
-		oif = (*reRoutingMap)[reRoutingKey];
-		UpdateTurningSW(packet, oif);
-		return oif;at
-	}
+	 {
+	 oif = (*reRoutingMap)[reRoutingKey];
+	 UpdateTurningSW(packet, oif);
+	 return oif;at
+	 }
 
-	uint32_t normalOif=0;
-	bool isForwarding = IsForwarding_FatTree(nodeId, dstId, iif);
-	if (isForwarding){ //Following the normal routing path
-		normalOif = NormalForwarding_FatTree(nodeId, dstId, turningId,iif);// calculate the OIF without reRouting
-		if (!isLRD)
-			assert(iif != normalOif);
-	}
+	 uint32_t normalOif=0;
+	 bool isForwarding = IsForwarding_FatTree(nodeId, dstId, iif);
+	 if (isForwarding){ //Following the normal routing path
+	 normalOif = NormalForwarding_FatTree(nodeId, dstId, turningId,iif);// calculate the OIF without reRouting
+	 if (!isLRD)
+	 assert(iif != normalOif);
+	 }
 
 
-	bool isNormal;
-	if (nodeId.id_pod == dstId.id_pod) { // in destination server pod
-		isNormal = isForwarding && IsNotFailure_FatTree(nodeId, normalOif) && IsDestReachable(nodeId, dstId);
-	} else {
-		isNormal = isForwarding && IsNotFailure_FatTree(nodeId, normalOif);
-	}
+	 bool isNormal;
+	 if (nodeId.id_pod == dstId.id_pod) { // in destination server pod
+	 isNormal = isForwarding && IsNotFailure_FatTree(nodeId, normalOif) && IsDestReachable(nodeId, dstId);
+	 } else {
+	 isNormal = isForwarding && IsNotFailure_FatTree(nodeId, normalOif);
+	 }
 
-	if (isNormal) {
-		assert(oif != iif);
-		return normalOif;
-	}
+	 if (isNormal) {
+	 assert(oif != iif);
+	 return normalOif;
+	 }
 
-// backtracking or detect new port/link failure at current switch/node
-	//		nodeId.Print(std::cout);
-	IsBackTag isbackId1;
-	IsBackTag isbackId2 = IsBackTag(1);
-	IsBackTag isbackId3;
-//	std::cout << "backward\n";
+	 // backtracking or detect new port/link failure at current switch/node
+	 //		nodeId.Print(std::cout);
+	 IsBackTag isbackId1;
+	 IsBackTag isbackId2 = IsBackTag(1);
+	 IsBackTag isbackId3;
+	 //	std::cout << "backward\n";
 
-	if (0==nodeId.id_level){
-		assert(!isLRD);//in LRD, we assume no failure in core switches.
-		packet->PeekPacketTag(isbackId1);
-		packet->RemovePacketTag(isbackId2);
-		packet->AddPacketTag(isbackId2);
+	 if (0==nodeId.id_level){
+	 assert(!isLRD);//in LRD, we assume no failure in core switches.
+	 packet->PeekPacketTag(isbackId1);
+	 packet->RemovePacketTag(isbackId2);
+	 packet->AddPacketTag(isbackId2);
 
-		if (isForwarding && !IsNotFailure_FatTree(nodeId,oif)){ //send back the packet from the input port
-			return iif;
-		}
-		else // keep backtracking it.
-			return NormalForwarding_FatTree(nodeId,srcId,turningId,iif);
-	}
+	 if (isForwarding && !IsNotFailure_FatTree(nodeId,oif)){ //send back the packet from the input port
+	 return iif;
+	 }
+	 else // keep backtracking it.
+	 return NormalForwarding_FatTree(nodeId,srcId,turningId,iif);
+	 }
 
-	if (1==nodeId.id_level){
-		//all the LRD packet is forwarding packet?
-		if (isLRD){
-			oif=FindRecoveryPort(oif);
-			(*reRoutingMap)[reRoutingKey]=oif;
-			std::cout << "LRD in downrouting path. Add reroute path: "
-					<< reRoutingKey << "->" << oif << ", at level-"
-					<< nodeId.id_level << " switch: "
-					<< nodeId.toString() << std::endl;
-		}
-	}*/
-/*
-	switch (nodeId.id_level) {
-	case 0:
-		// In downrouting path, for LRD, we do not consider port/link failure at level-0 (core) switch.
-		assert(!isLRD);
+	 if (1==nodeId.id_level){
+	 //all the LRD packet is forwarding packet?
+	 if (isLRD){
+	 oif=FindRecoveryPort(oif);
+	 (*reRoutingMap)[reRoutingKey]=oif;
+	 std::cout << "LRD in downrouting path. Add reroute path: "
+	 << reRoutingKey << "->" << oif << ", at level-"
+	 << nodeId.id_level << " switch: "
+	 << nodeId.toString() << std::endl;
+	 }
+	 }*/
+	/*
+	 switch (nodeId.id_level) {
+	 case 0:
+	 // In downrouting path, for LRD, we do not consider port/link failure at level-0 (core) switch.
+	 assert(!isLRD);
 
-		if (isForwarding) { // just go back to the source.
-			oif = iif;
-		} else { // this is a backtracked packet, keep backtracking it.
-			oif = NormalForwarding_FatTree(nodeId, srcId, turningId, iif);
-		}
-		std::cout << "switch=" << nodeId.toString() << ", oif=" << oif
-				<< ", normalOif=" << normalOif << ", iif=" << iif
-				<< std::endl;
+	 if (isForwarding) { // just go back to the source.
+	 oif = iif;
+	 } else { // this is a backtracked packet, keep backtracking it.
+	 oif = NormalForwarding_FatTree(nodeId, srcId, turningId, iif);
+	 }
+	 std::cout << "switch=" << nodeId.toString() << ", oif=" << oif
+	 << ", normalOif=" << normalOif << ", iif=" << iif
+	 << std::endl;
 
-		packet->PeekPacketTag(isbackId1);
-//			std::cout<<"old isbackId = "<<isbackId1.isBack;
-		packet->RemovePacketTag(isbackId1);
+	 packet->PeekPacketTag(isbackId1);
+	 //			std::cout<<"old isbackId = "<<isbackId1.isBack;
+	 packet->RemovePacketTag(isbackId1);
 
-		packet->AddPacketTag(isbackId2);
-//			std::cout<<" and the previous isbackId3 = "<<isbackId3.isBack;
-		packet->PeekPacketTag(isbackId3);
-//			std::cout<<"; And the new isbackId = "<<isbackId3.isBack<<std::endl;;
-		break;
+	 packet->AddPacketTag(isbackId2);
+	 //			std::cout<<" and the previous isbackId3 = "<<isbackId3.isBack;
+	 packet->PeekPacketTag(isbackId3);
+	 //			std::cout<<"; And the new isbackId = "<<isbackId3.isBack<<std::endl;;
+	 break;
 
-	case 1:
+	 case 1:
 
-		if (nodeId.id_pod == dstId.id_pod) { // in destination pod.
-			// This must be a failure in downstream path.
-			assert(!IsNotFailure_FatTree(nodeId, normalOif));
+	 if (nodeId.id_pod == dstId.id_pod) { // in destination pod.
+	 // This must be a failure in downstream path.
+	 assert(!IsNotFailure_FatTree(nodeId, normalOif));
 
-			if (isLRD) {
-				// use another downrouting port.
-				oif = FindRecoveryPort(normalOif);
+	 if (isLRD) {
+	 // use another downrouting port.
+	 oif = FindRecoveryPort(normalOif);
 
-				// This is a V-turn switch.
-				// Record the reroute path for routing subsequent packets.
-				(*reRoutingMap)[reRoutingKey] = oif;
-				std::cout << "LRD in downrouting path. Add reroute path: "
-						<< reRoutingKey << "->" << oif << ", at level-"
-						<< nodeId.id_level << " switch: "
-						<< nodeId.toString() << std::endl;
-			} else {
-				// start to backtrack, just go back
-				oif = iif;
-//					oif = NormalForwarding_FatTree(nodeId, srcId, dstId,
-//							turningId); // backtracking
-				std::cout << "backtracking at switch " << nodeId.toString()
-						<< ", from port " << normalOif << " to " << oif
-						<< std::endl;
-			}
-		} else { // in source pod
-			assert(nodeId.id_pod == srcId.id_pod);
-			if (iif <= Port_num / 2) { // failure in upstream path
-				assert(!IsNotFailure_FatTree(nodeId, normalOif));
+	 // This is a V-turn switch.
+	 // Record the reroute path for routing subsequent packets.
+	 (*reRoutingMap)[reRoutingKey] = oif;
+	 std::cout << "LRD in downrouting path. Add reroute path: "
+	 << reRoutingKey << "->" << oif << ", at level-"
+	 << nodeId.id_level << " switch: "
+	 << nodeId.toString() << std::endl;
+	 } else {
+	 // start to backtrack, just go back
+	 oif = iif;
+	 //					oif = NormalForwarding_FatTree(nodeId, srcId, dstId,
+	 //							turningId); // backtracking
+	 std::cout << "backtracking at switch " << nodeId.toString()
+	 << ", from port " << normalOif << " to " << oif
+	 << std::endl;
+	 }
+	 } else { // in source pod
+	 assert(nodeId.id_pod == srcId.id_pod);
+	 if (iif <= Port_num / 2) { // failure in upstream path
+	 assert(!IsNotFailure_FatTree(nodeId, normalOif));
 
-				// use another uprouting port.
-				oif = FindRecoveryPort(normalOif);
+	 // use another uprouting port.
+	 oif = FindRecoveryPort(normalOif);
 
-				// This is a V-turn switch.
-				// Record the reroute path for routing subsequent packets.
-				UpdateTurningSW(packet, oif);
-				(*reRoutingMap)[reRoutingKey] = oif;
-				std::cout << "Add reroute path: " << reRoutingKey << "->"
-						<< oif << ", at level-" << nodeId.id_level
-						<< " switch: " << nodeId.toString() << std::endl;
+	 // This is a V-turn switch.
+	 // Record the reroute path for routing subsequent packets.
+	 UpdateTurningSW(packet, oif);
+	 (*reRoutingMap)[reRoutingKey] = oif;
+	 std::cout << "Add reroute path: " << reRoutingKey << "->"
+	 << oif << ", at level-" << nodeId.id_level
+	 << " switch: " << nodeId.toString() << std::endl;
 
-			} else { // backtracked packet
-				if (isEfficientFatTree) { // For efficient fat-tree, the V-turn switch is a level-1 switch.
-					if (iif != Port_num / 2 + 1) {
-						oif = Port_num / 2 + 1;
-					} else {
-						oif = Port_num;
-					}
+	 } else { // backtracked packet
+	 if (isEfficientFatTree) { // For efficient fat-tree, the V-turn switch is a level-1 switch.
+	 if (iif != Port_num / 2 + 1) {
+	 oif = Port_num / 2 + 1;
+	 } else {
+	 oif = Port_num;
+	 }
 
-					// This is a V-turn switch.
-					// Record the reroute path for routing subsequent packets.
-					UpdateTurningSW(packet, oif);
-					(*reRoutingMap)[reRoutingKey] = oif;
-					std::cout << "Backtracked packet. Add reroute path: "
-							<< reRoutingKey << "->" << oif << ", at level-"
-							<< nodeId.id_level << " switch: "
-							<< nodeId.toString() << std::endl;
-				}
-				// For regular fat-tree, keep backtracking the packet from this level-1 switch
-				// to the level-2 switch (the V-turn switch).
-				else {
-					// keep backtracking the packet.
-					oif = NormalForwarding_FatTree(nodeId, srcId, turningId,
-							iif); // backtracking;
-//						oif = NormalForwarding_FatTree(nodeId, srcId, dstId,
-//								turningId); // backtracking
-				}
-			}
-		}
+	 // This is a V-turn switch.
+	 // Record the reroute path for routing subsequent packets.
+	 UpdateTurningSW(packet, oif);
+	 (*reRoutingMap)[reRoutingKey] = oif;
+	 std::cout << "Backtracked packet. Add reroute path: "
+	 << reRoutingKey << "->" << oif << ", at level-"
+	 << nodeId.id_level << " switch: "
+	 << nodeId.toString() << std::endl;
+	 }
+	 // For regular fat-tree, keep backtracking the packet from this level-1 switch
+	 // to the level-2 switch (the V-turn switch).
+	 else {
+	 // keep backtracking the packet.
+	 oif = NormalForwarding_FatTree(nodeId, srcId, turningId,
+	 iif); // backtracking;
+	 //						oif = NormalForwarding_FatTree(nodeId, srcId, dstId,
+	 //								turningId); // backtracking
+	 }
+	 }
+	 }
 
-		break;
-	case 2:
-		if (nodeId.id_pod == dstId.id_pod) { // LRD V-turn switch
-			assert(isLRD);
-			assert(!IsDestReachable(nodeId, dstId));
+	 break;
+	 case 2:
+	 if (nodeId.id_pod == dstId.id_pod) { // LRD V-turn switch
+	 assert(isLRD);
+	 assert(!IsDestReachable(nodeId, dstId));
 
-			// use another uprouting port (V-turn switch).
-			oif = FindRecoveryPort(iif);
-			assert(oif > Port_num / 2 && oif <= Port_num); // must be uprouting port.
+	 // use another uprouting port (V-turn switch).
+	 oif = FindRecoveryPort(iif);
+	 assert(oif > Port_num / 2 && oif <= Port_num); // must be uprouting port.
 
-			(*reRoutingMap)[reRoutingKey] = oif;
-			std::cout << "Local rerouted packet for LRD. Add reroute path: "
-					<< reRoutingKey << "->" << oif << ", at level-"
-					<< nodeId.id_level << " switch: " << nodeId.toString()
-					<< std::endl;
-		} else {
-			assert(nodeId.id_pod == srcId.id_pod);
-			if (iif <= Port_num / 2) { // failure in upstream path
-				std::cout << "nodeId=" << nodeId.toString() << ", port="
-						<< normalOif << std::endl;
-				assert(!IsNotFailure_FatTree(nodeId, normalOif));
+	 (*reRoutingMap)[reRoutingKey] = oif;
+	 std::cout << "Local rerouted packet for LRD. Add reroute path: "
+	 << reRoutingKey << "->" << oif << ", at level-"
+	 << nodeId.id_level << " switch: " << nodeId.toString()
+	 << std::endl;
+	 } else {
+	 assert(nodeId.id_pod == srcId.id_pod);
+	 if (iif <= Port_num / 2) { // failure in upstream path
+	 std::cout << "nodeId=" << nodeId.toString() << ", port="
+	 << normalOif << std::endl;
+	 assert(!IsNotFailure_FatTree(nodeId, normalOif));
 
-				// use another uprouting port.
-				oif = FindRecoveryPort(normalOif);
+	 // use another uprouting port.
+	 oif = FindRecoveryPort(normalOif);
 
-				// This is a V-turn switch.
-				// Record the reroute path for routing subsequent packets.
-				UpdateTurningSW(packet, oif);
-				(*reRoutingMap)[reRoutingKey] = oif;
-				std::cout << "Failure in source pod. Add reroute path: "
-						<< reRoutingKey << "->" << oif << ", at level-"
-						<< nodeId.id_level << " switch: "
-						<< nodeId.toString() << std::endl;
-			} else { // backtracked packet
-				// use another uprouting port (V-turn switch).
-				oif = FindRecoveryPort(iif);
-				assert(oif > Port_num / 2 && oif <= Port_num);// must be uprouting port.
+	 // This is a V-turn switch.
+	 // Record the reroute path for routing subsequent packets.
+	 UpdateTurningSW(packet, oif);
+	 (*reRoutingMap)[reRoutingKey] = oif;
+	 std::cout << "Failure in source pod. Add reroute path: "
+	 << reRoutingKey << "->" << oif << ", at level-"
+	 << nodeId.id_level << " switch: "
+	 << nodeId.toString() << std::endl;
+	 } else { // backtracked packet
+	 // use another uprouting port (V-turn switch).
+	 oif = FindRecoveryPort(iif);
+	 assert(oif > Port_num / 2 && oif <= Port_num);// must be uprouting port.
 
-				// This is a V-turn switch.
-				// Record the reroute path for routing subsequent packets.
-				UpdateTurningSW(packet, oif);
-				(*reRoutingMap)[reRoutingKey] = oif;
-				std::cout << "Backtracked packet. Add reroute path: "
-						<< reRoutingKey << "->" << oif << ", at level-"
-						<< nodeId.id_level << " switch: "
-						<< nodeId.toString() << std::endl;
-			}
-		}
+	 // This is a V-turn switch.
+	 // Record the reroute path for routing subsequent packets.
+	 UpdateTurningSW(packet, oif);
+	 (*reRoutingMap)[reRoutingKey] = oif;
+	 std::cout << "Backtracked packet. Add reroute path: "
+	 << reRoutingKey << "->" << oif << ", at level-"
+	 << nodeId.id_level << " switch: "
+	 << nodeId.toString() << std::endl;
+	 }
+	 }
 
-//				oif = NormalForwarding_FatTree(nodeId, dstId, srcId, turningId);
-//				reRoutDistributor++;
-//				if (reRoutDistributor == (Port_num / 2 - 1)) {
-//					reRoutDistributor++;
-//				}
-//				oif = (oif + reRoutDistributor) % (Port_num / 2) + Port_num / 2
-//						+ 1;
-//				(*reRoutingMap)[reRoutingKey] = oif;
-//				std::cout << "add to rerouting map in level 2 switch = "
-//						<< std::endl;
-//				for (std::map<std::string, uint32_t>::const_iterator it =
-//						reRoutingMap->begin(); it != reRoutingMap->end();
-//						++it) {
-//					std::cout << "key=" << it->first << "; oif=" << it->second
-//							<< "\n";
-//				}
-		break;
-	default:
-		std::cout
-				<< "error in point-to point-net-device.h->PointToPointNetDevice::Forwarding_FatTree\n";
-		break;
-	}
+	 //				oif = NormalForwarding_FatTree(nodeId, dstId, srcId, turningId);
+	 //				reRoutDistributor++;
+	 //				if (reRoutDistributor == (Port_num / 2 - 1)) {
+	 //					reRoutDistributor++;
+	 //				}
+	 //				oif = (oif + reRoutDistributor) % (Port_num / 2) + Port_num / 2
+	 //						+ 1;
+	 //				(*reRoutingMap)[reRoutingKey] = oif;
+	 //				std::cout << "add to rerouting map in level 2 switch = "
+	 //						<< std::endl;
+	 //				for (std::map<std::string, uint32_t>::const_iterator it =
+	 //						reRoutingMap->begin(); it != reRoutingMap->end();
+	 //						++it) {
+	 //					std::cout << "key=" << it->first << "; oif=" << it->second
+	 //							<< "\n";
+	 //				}
+	 break;
+	 default:
+	 std::cout
+	 << "error in point-to point-net-device.h->PointToPointNetDevice::Forwarding_FatTree\n";
+	 break;
+	 }
 
-	if (isForwarding) {
-		assert(oif != normalOif);
-	}
-	return oif;*/
+	 if (isForwarding) {
+	 assert(oif != normalOif);
+	 }
+	 return oif;*/
 }
 
 /*-------------------------------------------------------------------------------------------*/

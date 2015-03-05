@@ -751,8 +751,19 @@ uint32_t PointToPointNetDevice::Forwarding_FatTree(Ptr<Packet> packet,
 		if (reRoutingMap->find(reRoutingKey) != reRoutingMap->end()) { //Following the existing reRouting pattern
 			oif = (*reRoutingMap)[reRoutingKey];
 			UpdateTurningSW(packet, oif);
+
+			return oif; // by Chunzhi
 		} else { //Following the normal routing pattern
-			oif = NormalForwarding_FatTree(nodeId, dstId, turningId, iif);
+			/*-----------------------------------Chunzhi---------------------------------------------------------------------*/
+			if (isLRD && nodeId.id_pod == dstId.id_pod && nodeId.id_level == 1
+					&& iif >= 1 && iif <= Port_num / 2) { // Only for LRD algorithm. In the destination pod, the aggregation-level turning switch used to bypass failure.
+				assert(IsDestReachable(nodeId, dstId));
+				oif = dstId.id_switch + 1;
+			}
+			/*------------------------------------------------------------------------------------------------------------------*/
+			else {
+				oif = NormalForwarding_FatTree(nodeId, dstId, turningId, iif);
+			}
 		}
 	}
 
@@ -760,8 +771,11 @@ uint32_t PointToPointNetDevice::Forwarding_FatTree(Ptr<Packet> packet,
 	if (nodeId.id_pod == dstId.id_pod)
 		isNormal = isNormal && IsDestReachable(nodeId, dstId);
 
-	if (isNormal)
+	if (isNormal) {
+//		std::cout << "Normal forwarding: " << " switch=" << nodeId.toString()
+//				<< ", port=" << oif << std::endl;
 		return oif;
+	}
 
 	/*
 	 * For link failures and redirected packets (v-turn or backtracking).
@@ -775,6 +789,10 @@ uint32_t PointToPointNetDevice::Forwarding_FatTree(Ptr<Packet> packet,
 			assert(!IsNotFailure_FatTree(nodeId, oif)); //error must incurred by link failure.
 			oif = FindRecoveryPort(oif);
 			(*reRoutingMap)[reRoutingKey] = oif;
+			std::cout << "Local rerouted packet for LRD. Add reroute path: "
+					<< reRoutingKey << "->" << oif << ", at level-"
+					<< nodeId.id_level << " switch: " << nodeId.toString()
+					<< std::endl;
 			return oif;
 		}
 		if (2 == nodeId.id_level && iif <= Port_num / 2) { //Choose another upstream path
@@ -782,6 +800,10 @@ uint32_t PointToPointNetDevice::Forwarding_FatTree(Ptr<Packet> packet,
 			oif = FindRecoveryPort(oif);
 			(*reRoutingMap)[reRoutingKey] = oif;
 			UpdateTurningSW(packet, oif); // update the turning switch tag
+			std::cout << "Local rerouted packet for LRD. Add reroute path: "
+					<< reRoutingKey << "->" << oif << ", at level-"
+					<< nodeId.id_level << " switch: " << nodeId.toString()
+					<< std::endl;
 			return oif;
 		}
 		if (2 == nodeId.id_level && iif > Port_num / 2) { //Send packets to another aggregate switch

@@ -55,9 +55,9 @@ extern double collectTime;
 const uint Port_num = 8; // set the # of ports at a switch. k=8
 
 void setFailure(void) {
-	// link 001:2 <-> 012:5
-	FailNode_oif_map["001"] = 2;
-	FailNode_oif_map["012"] = 5;
+	// link 001:1 <-> 002:5
+	FailNode_oif_map["001"] = 1;
+	FailNode_oif_map["002"] = 5;
 }
 void clearFailure(NodeContainer switchAll) {
 	FailNode_oif_map.clear();
@@ -107,14 +107,15 @@ void showSinkResult(string flowId, Ptr<PacketSink> sink) {
 int main(int argc, char *argv[]) {
 	/*-------------------parameter setting----------------------*/
 	startTimeFatTree = 0.0;
-	stopTimeFatTree = 10.0;
-	collectTime = 5.0;
+	stopTimeFatTree = 5.0;
+	collectTime = 0.0;
 	selectedNode = 129; //Id 167 is the aggregate switch for flow(18->5) and flow(20->113)
 						//Id 171 is the aggregate switch for flow(35->5) and flow(40->100)
 						//Id 129 is the edge switch for flow(18->5) and flow(35->5)
 
 	// set failure
-	double failTimeFatTree = collectTime + (stopTimeFatTree - collectTime) / 2;
+//	double failTimeFatTree = collectTime + (stopTimeFatTree - collectTime) / 2;
+	double failTimeFatTree = startTimeFatTree;
 	Simulator::Schedule(Seconds(failTimeFatTree), setFailure);
 //	Simulator::Schedule(Seconds(10.0), clearFailure, switchAll);
 //	Simulator::Schedule(Seconds(50.0), setFailure);
@@ -422,13 +423,15 @@ int main(int argc, char *argv[]) {
 	ApplicationContainer sinkApps;
 
 	vector<pair<string, pair<string, uint> > > flows;
-	flows.push_back(make_pair("203", make_pair("011", dst_port)));
+	flows.push_back(make_pair("101", make_pair("000", dst_port)));
+//	flows.push_back(make_pair("203", make_pair("011", dst_port)));
 //	flows.push_back(make_pair("102", make_pair("011", dst_port + 1)));
 //	flows.push_back(make_pair("110", make_pair("701", dst_port)));
 	flows.push_back(make_pair("220", make_pair("610", dst_port)));
 
 	// server_label -> turning_switch_label
 	// Note that the adding order is important, i.e. the first matching pair is used.
+	server_turning_pairs.push_back(std::make_pair("101", "00x"));
 	server_turning_pairs.push_back(std::make_pair("102", "00x"));
 	server_turning_pairs.push_back(std::make_pair("110", "31x"));
 	server_turning_pairs.push_back(std::make_pair("220", "32x"));

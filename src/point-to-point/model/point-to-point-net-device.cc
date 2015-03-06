@@ -695,6 +695,10 @@ void PointToPointNetDevice::UpdateTurningSW(Ptr<Packet> packet, uint oif) {
 	assert(original_turningId.id_level == 1);
 	newTurningId.id_switch = oif - Port_num / 2 - 1;
 
+//	std::cout << "Chunzhi says original truning switch= "
+//			<< original_turningId.toString() << ",  new turning switch="
+//			<< newTurningId.toString() << std::endl;
+
 	assert(newTurningId.id_level == original_turningId.id_level);
 	assert(
 			(newTurningId.id_pod != original_turningId.id_pod)
@@ -751,7 +755,8 @@ uint32_t PointToPointNetDevice::Forwarding_FatTree(Ptr<Packet> packet,
 		if (reRoutingMap->find(reRoutingKey) != reRoutingMap->end()) { //Following the existing reRouting pattern
 			oif = (*reRoutingMap)[reRoutingKey];
 			UpdateTurningSW(packet, oif);
-
+//			std::cout << "Reroute forwarding: " << " switch="
+//					<< nodeId.toString() << ", port=" << oif << std::endl;
 			return oif; // by Chunzhi
 		} else { //Following the normal routing pattern
 			/*-----------------------------------Chunzhi---------------------------------------------------------------------*/
@@ -763,18 +768,34 @@ uint32_t PointToPointNetDevice::Forwarding_FatTree(Ptr<Packet> packet,
 			/*------------------------------------------------------------------------------------------------------------------*/
 			else {
 				oif = NormalForwarding_FatTree(nodeId, dstId, turningId, iif);
+
+//				std::cout << "Chunzhi says original truning switch= "
+//						<< turningId.toString() << std::endl;
 			}
 		}
 	}
 
 	bool isNormal = isForwarding && IsNotFailure_FatTree(nodeId, oif);
-	if (nodeId.id_pod == dstId.id_pod)
-		isNormal = isNormal && IsDestReachable(nodeId, dstId);
 
+	/*---------Chunzhi----------------------*/
+	if ((nodeId.id_level == 1 || nodeId.id_level == 2)
+			&& nodeId.id_pod == dstId.id_pod) {
+		if (iif > Port_num / 2) { //downrouting
+			isNormal = isNormal && IsDestReachable(nodeId, dstId); // exclude backtracking/return packets
+		}
+	}
+	/*--------------------------------------------*/
+
+	// commented by Chunzhi
+//	if (nodeId.id_pod == dstId.id_pod)
+//		isNormal = isNormal && IsDestReachable(nodeId, dstId);
 	if (isNormal) {
 //		std::cout << "Normal forwarding: " << " switch=" << nodeId.toString()
 //				<< ", port=" << oif << std::endl;
 		return oif;
+	} else {
+//		std::cout << "Chunzhi says abnormal forwarding: " << " switch="
+//				<< nodeId.toString() << ", port=" << oif << std::endl;
 	}
 
 	/*
@@ -810,6 +831,13 @@ uint32_t PointToPointNetDevice::Forwarding_FatTree(Ptr<Packet> packet,
 			assert(!IsDestReachable(nodeId, dstId)); //packet can reach the destination due to the V-turn
 			oif = FindRecoveryPort(iif);
 			(*reRoutingMap)[reRoutingKey] = oif;
+
+			/*---------------------Chunzhi---------------------*/
+			if (srcId.id_pod == dstId.id_pod) { // 4-hop flow
+				UpdateTurningSW(packet, oif); // update the turning switch tag
+			}
+			/*------------------------------------------------------*/
+
 			std::cout << "Local rerouted packet for LRD. Add reroute path: "
 					<< reRoutingKey << "->" << oif << ", at level-"
 					<< nodeId.id_level << " switch: " << nodeId.toString()
@@ -854,30 +882,44 @@ uint32_t PointToPointNetDevice::Forwarding_FatTree(Ptr<Packet> packet,
 				 * We don't consider efficient Fat-Tree at this stage
 				 * */
 				oif = NormalForwarding_FatTree(nodeId, srcId, turningId, iif);
-				std::cout << "chunzhi says: keep backtracking from id_level = "
-						<< nodeId.id_level << "; oif=" << oif << std::endl;
+				std::cout << "chunzhi says: keep backtracking from node = "
+						<< nodeId.toString() << "; oif=" << oif << std::endl;
 				return oif;
 			} else { // return this packet
 				assert(!IsNotFailure_FatTree(nodeId, oif)); // error must be incurred by link failure
 				oif = iif;
-				std::cout << "chunzhi says: U-turn from id_level = "
-						<< nodeId.id_level << "; oif=" << oif << std::endl;
+				std::cout << "chunzhi says: U-turn from node = "
+						<< nodeId.toString() << "; oif=" << oif << std::endl;
 				return oif;
 			}
 		}
-		if (1 == nodeId.id_level && iif <= Port_num / 2) { //choose another upstream path
+		if (1 == nodeId.id_level && iif <= Port_num / 2) {
 			assert(!IsNotFailure_FatTree(nodeId, oif)); // error must be incurred by link failure
-			oif = FindRecoveryPort(oif);
-			UpdateTurningSW(packet, oif);
-			std::cout << "chunzhi says: Recovery Path from id_level = "
-					<< nodeId.id_level << "; oif=" << oif << std::endl;
+
+			/*-----------------------------------------------Chunzhi------------------------------------------*/
+			if (srcId.id_pod == dstId.id_pod) { // 4-hop flow, return this packet
+				oif = iif;
+				std::cout << "chunzhi says: U-turn from node = "
+						<< nodeId.toString() << "; oif=" << oif << std::endl;
+			}
+			/*-----------------------------------------------------------------------------------------------------*/
+
+			else { // 6-hop flow, choose another upstream path
+				assert(srcId.id_pod != dstId.id_pod);
+				oif = FindRecoveryPort(oif);
+				UpdateTurningSW(packet, oif);
+				std::cout << "chunzhi says: Recovery Path from node = "
+						<< nodeId.toString() << "; oif=" << oif << std::endl;
+			}
 			return oif;
 		}
 		/***********************************************************************
 		 *****     For all the level 2 (access) switches          ***********
 		 ***********************************************************************/
 		if (2 == nodeId.id_level && iif > Port_num / 2) {
-			assert(!isForwarding); // We assume no failure exists in links connected to servers.
+			if (srcId.id_pod != dstId.id_pod) { // add by Chunzhi
+				assert(!isForwarding); // We assume no failure exists in links connected to servers.
+			}
 
 			// Commented by Chunzhi: the reRoutingKey may not exist.
 			/*if (iif != (*reRoutingMap)[reRoutingKey]) { //Following the existing re-routing pattern
@@ -890,8 +932,8 @@ uint32_t PointToPointNetDevice::Forwarding_FatTree(Ptr<Packet> packet,
 				oif = (*reRoutingMap).at(reRoutingKey);
 				assert(iif != oif);
 				UpdateTurningSW(packet, oif);
-				std::cout << "chunzhi says: Recovery Path from id_level = "
-						<< nodeId.id_level << "; oif=" << oif << std::endl;
+				std::cout << "chunzhi says: Recovery Path from node = "
+						<< nodeId.toString() << "; oif=" << oif << std::endl;
 				return oif;
 			}
 			/*----------------------------------------------------------*/
@@ -900,8 +942,8 @@ uint32_t PointToPointNetDevice::Forwarding_FatTree(Ptr<Packet> packet,
 			oif = FindRecoveryPort(iif);
 			UpdateTurningSW(packet, oif);
 			(*reRoutingMap)[reRoutingKey] = oif;
-			std::cout << "chunzhi says: Recovery Path from id_level = "
-					<< nodeId.id_level << "; oif=" << oif << std::endl;
+			std::cout << "chunzhi says: Recovery Path from node = "
+					<< nodeId.toString() << "; oif=" << oif << std::endl;
 			return oif;
 		}
 		if (2 == nodeId.id_level && iif <= Port_num / 2) { // Find another upstream path
@@ -909,6 +951,9 @@ uint32_t PointToPointNetDevice::Forwarding_FatTree(Ptr<Packet> packet,
 			oif = FindRecoveryPort(oif);
 			UpdateTurningSW(packet, oif);
 			(*reRoutingMap)[reRoutingKey] = oif;
+
+			std::cout << "chunzhi says: Recovery Path from node = "
+					<< nodeId.toString() << "; oif=" << oif << std::endl;
 			return oif;
 		}
 	}

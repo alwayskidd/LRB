@@ -423,20 +423,24 @@ int main(int argc, char *argv[]) {
 	ApplicationContainer sinkApps;
 
 	vector<pair<string, pair<string, uint> > > flows;
-	flows.push_back(make_pair("101", make_pair("000", dst_port)));
+	flows.push_back(make_pair("000", make_pair("001", dst_port)));
+	flows.push_back(make_pair("000", make_pair("010", dst_port)));
+	flows.push_back(make_pair("000", make_pair("101", dst_port)));
 //	flows.push_back(make_pair("203", make_pair("011", dst_port)));
 //	flows.push_back(make_pair("102", make_pair("011", dst_port + 1)));
 //	flows.push_back(make_pair("110", make_pair("701", dst_port)));
-	flows.push_back(make_pair("220", make_pair("610", dst_port)));
+//	flows.push_back(make_pair("220", make_pair("610", dst_port)));
 
 	// server_label -> turning_switch_label
 	// Note that the adding order is important, i.e. the first matching pair is used.
+	server_turning_pairs.push_back(std::make_pair("001", "00x"));
+	server_turning_pairs.push_back(std::make_pair("010", "001"));
 	server_turning_pairs.push_back(std::make_pair("101", "00x"));
-	server_turning_pairs.push_back(std::make_pair("102", "00x"));
-	server_turning_pairs.push_back(std::make_pair("110", "31x"));
-	server_turning_pairs.push_back(std::make_pair("220", "32x"));
-	server_turning_pairs.push_back(std::make_pair("011", "00x"));
-	server_turning_pairs.push_back(std::make_pair("111", "31x"));
+//	server_turning_pairs.push_back(std::make_pair("102", "00x"));
+//	server_turning_pairs.push_back(std::make_pair("110", "31x"));
+//	server_turning_pairs.push_back(std::make_pair("220", "32x"));
+//	server_turning_pairs.push_back(std::make_pair("011", "00x"));
+//	server_turning_pairs.push_back(std::make_pair("111", "31x"));
 
 	map<string, Ptr<PacketSink> > flow_sink_map;
 

@@ -691,16 +691,28 @@ void Ipv4L3Protocol::SendRealOut(Ptr<Ipv4Route> route, Ptr<Packet> packet,
 				break;
 			}
 		}
+//		std::cout << "chunzhi says turning switch=" << turning_switch_label
+//				<< std::endl;
 
 		if (turning_switch_label == "xxx") { // not found in the pairs, set default turning switch to "21x"
 			nodeId_turning.id_pod = 2;    //TODO
 			nodeId_turning.id_switch = 1;    //TODO
 		} else { // found in the server_turning_pairs.
+
 			uint i_pod = atoi(turning_switch_label.substr(0, 1).c_str());
-			uint i_switch = atoi(turning_switch_label.substr(1, 2).c_str());
+			uint i_switch = atoi(turning_switch_label.substr(1, 1).c_str());
+//			std::cout << "chunzhi says i_switch_str="
+//					<< turning_switch_label.substr(1, 2).c_str() << "i_switch="
+//					<< atoi(turning_switch_label.substr(1, 2).c_str())
+//					<< std::endl;
+//			std::cout << "chunzhi says i_pod&i_switch=" << i_pod << "&"
+//					<< i_switch << std::endl;
 			nodeId_turning.id_pod = i_pod;    //TODO
 			nodeId_turning.id_switch = i_switch;    //TODO
 		}
+
+//		std::cout << "chunzhi says turning switch=" << nodeId_turning.toString()
+//				<< std::endl;
 
 		// set level of turning switch
 		if (nodeId_dst.id_pod != nodeId_src.id_pod) {
@@ -797,6 +809,10 @@ void Ipv4L3Protocol::SendRealOut(Ptr<Ipv4Route> route, Ptr<Packet> packet,
 		packet->AddPacketTag(
 				TurningIdTag(nodeId_turning.id_pod, nodeId_turning.id_switch,
 						nodeId_turning.id_level));
+
+//		std::cout << "chunzhi says turning switch=" << nodeId_turning.toString()
+//				<< std::endl;
+
 //		std::cout << "turning node=";
 //		nodeId_turning.Print(std::cout);
 		packet->AddPacketTag(TimeStampTag(time));

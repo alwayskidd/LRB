@@ -32,6 +32,7 @@
 #include "ns3/boolean.h"
 #include "ns3/simulator.h"
 #include <string>
+#include<cassert>
 
 NS_LOG_COMPONENT_DEFINE("Node");
 

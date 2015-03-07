@@ -39,6 +39,7 @@
 #include "icmpv4-l4-protocol.h"
 #include "ipv4-interface.h"
 #include "ipv4-raw-socket-impl.h"
+#include <cassert>
 
 NS_LOG_COMPONENT_DEFINE("Ipv4L3Protocol");
 
@@ -809,9 +810,6 @@ void Ipv4L3Protocol::SendRealOut(Ptr<Ipv4Route> route, Ptr<Packet> packet,
 		packet->AddPacketTag(
 				TurningIdTag(nodeId_turning.id_pod, nodeId_turning.id_switch,
 						nodeId_turning.id_level));
-
-//		std::cout << "chunzhi says turning switch=" << nodeId_turning.toString()
-//				<< std::endl;
 
 //		std::cout << "turning node=";
 //		nodeId_turning.Print(std::cout);

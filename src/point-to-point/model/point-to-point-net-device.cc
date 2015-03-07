@@ -689,6 +689,9 @@ void PointToPointNetDevice::UpdateTurningSW(Ptr<Packet> packet, uint oif) {
 			newTurningId.id_pod = oif - Port_num / 2 - 1;
 		}
 		packet->AddPacketTag(newTurningId);
+//		std::cout << "Chunzhi says original truning switch= "
+//				<< original_turningId.toString() << ",  new turning switch="
+//				<< newTurningId.toString() << std::endl;
 		return;
 	}
 
@@ -703,7 +706,6 @@ void PointToPointNetDevice::UpdateTurningSW(Ptr<Packet> packet, uint oif) {
 	assert(
 			(newTurningId.id_pod != original_turningId.id_pod)
 					|| (newTurningId.id_switch != original_turningId.id_switch));
-
 	packet->AddPacketTag(newTurningId);
 	return;
 }
@@ -745,18 +747,28 @@ uint32_t PointToPointNetDevice::Forwarding_FatTree(Ptr<Packet> packet,
 	 * the failure link.
 	 * */
 	std::string reRoutingKey = dstId.toString() + turningId.toString();
+	if (reRoutingKey.size() != 6) {
+		std::cout << "reRoutingKey=" << reRoutingKey << ", turningId = "
+				<< i2s(turningId.id_pod) << i2s(turningId.id_switch)
+				<< i2s(turningId.id_level) << std::endl;
+		std::cout << i2s(0xffffffff) << std::endl;
+	}
 	// Must use pointer to refer to the SAME map! Otherwise it's just a copy of the original map.
 	std::map<std::string, uint32_t>* reRoutingMap =
 			&this->GetNode()->reRoutingMap;
 
 	/**************************** Start Edition by Zhang Xin   ***************************/
 	bool isForwarding = IsForwarding_FatTree(nodeId, dstId, iif);
+
 	if (isForwarding) { // Choose the oif according to either the re-routing pattern or routing pattern
 		if (reRoutingMap->find(reRoutingKey) != reRoutingMap->end()) { //Following the existing reRouting pattern
 			oif = (*reRoutingMap)[reRoutingKey];
-			UpdateTurningSW(packet, oif);
-//			std::cout << "Reroute forwarding: " << " switch="
-//					<< nodeId.toString() << ", port=" << oif << std::endl;
+			if (oif > Port_num / 2) { // add by Chunzhi: change TurningSwitch only for uprouting packets
+				UpdateTurningSW(packet, oif);
+			}
+//			std::cout << "Reroute Map forwarding for rerouteKey= "
+//					<< reRoutingKey << ", at switch=" << nodeId.toString()
+//					<< ", port=" << oif << std::endl;
 			return oif; // by Chunzhi
 		} else { //Following the normal routing pattern
 			/*-----------------------------------Chunzhi---------------------------------------------------------------------*/
@@ -794,8 +806,8 @@ uint32_t PointToPointNetDevice::Forwarding_FatTree(Ptr<Packet> packet,
 //				<< ", port=" << oif << std::endl;
 		return oif;
 	} else {
-//		std::cout << "Chunzhi says abnormal forwarding: " << " switch="
-//				<< nodeId.toString() << ", port=" << oif << std::endl;
+		std::cout << "Chunzhi says abnormal forwarding: " << " switch="
+				<< nodeId.toString() << ", port=" << oif << std::endl;
 	}
 
 	/*
@@ -908,6 +920,7 @@ uint32_t PointToPointNetDevice::Forwarding_FatTree(Ptr<Packet> packet,
 				assert(srcId.id_pod != dstId.id_pod);
 				oif = FindRecoveryPort(oif);
 				UpdateTurningSW(packet, oif);
+				(*reRoutingMap)[reRoutingKey] = oif; // add by Chunzhi
 				std::cout << "chunzhi says: Recovery Path from node = "
 						<< nodeId.toString() << "; oif=" << oif << std::endl;
 			}

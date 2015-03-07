@@ -42,7 +42,7 @@ std::vector<std::pair<std::string, std::string> > server_turning_pairs; // serve
 bool isEfficientFatTree = false;
 
 // use the LRD algorithm for comparison.
-bool isLRD = false;
+bool isLRD = true;
 // flows experience failure for testing LRD. flowId = "dstLabel_turningLabel_failureSwitchLabel"
 std::map<std::string, uint> LRD_failureflow_oif_map;
 

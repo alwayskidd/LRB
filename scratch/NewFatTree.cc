@@ -60,7 +60,7 @@ std::map<std::string, uint> LRD_failureflow_oif_map;
 std::map<std::string, uint32_t> FailNode_oif_map;
 extern double startTimeFatTree;
 extern double stopTimeFatTree;
-extern uint32_t selectedNode;
+//extern uint32_t selectedNode;
 extern double collectTime;
 //extern double failTimeFatTree;
 const uint Port_num = 8; // set the # of ports at a switch. k=8
@@ -98,11 +98,11 @@ void Flow::ShowSinkResult() {
 			<< std::endl;
 //	std::cout << "sinkApp = " << sink << "; sourceApp=" << this->srcApp
 //			<< std::endl;
-	std::cout << "total size : " << sink->GetTotalRx() << std::endl;
+	std::cout << "total size : " << sink->GetTotalRx() << " B" << std::endl;
 	std::cout << "total number of packets : " << sink->packetN << std::endl;
-	std::cout << "total delay is : " << sink->totalDelay << std::endl;
+	std::cout << "total delay is : " << sink->totalDelay << " s" << std::endl;
 	std::cout << "average delay is : " << sink->totalDelay / sink->packetN
-			<< std::endl;
+			<< " s" << std::endl;
 	std::cout << "Goodput is : "
 			<< (sink->GetTotalRx()
 					/ (stopTimeFatTree - startTimeFatTree - collectTime)) * 8.0
@@ -247,6 +247,8 @@ int main(int argc, char *argv[]) {
 //	// First create four set of Level-0 subnets
 	uint32_t ip1;
 
+	//-------------------------------------- Construct Topology------------------------------------------------
+
 	for (uint i = 0; i < Port_num; i++) {     // cycling with pods
 		for (uint j = 0; j < Port_num / 2; j++) { // cycling within every pod among Level 2 switches
 			node_l2switch.Get(i * (Port_num / 2) + j)->SetId_FatTree(i, j, 2); // labeling the switch
@@ -351,43 +353,15 @@ int main(int argc, char *argv[]) {
 		}
 	}
 
-	/*--------------------------verify the ID---------------------------------------*/
-//	for (int i = 0; i < (Port_num * Port_num * Port_num / 4); i++) //show the server ID
-//			{
-//		std::cout << "the ID for the server is";
-//		node_server.Get(i)->nodeId_FatTree.Print(std::cout);
-//	}
-//	for (int i = 0; i < (Port_num * Port_num / 2); i++) //show the l1switch and l2switch ID
-//			{
-//		std::cout << "the ID for the l1switch is";
-//		node_l1switch.Get(i)->nodeId_FatTree.Print(std::cout);
-//
-//		std::cout << "the ID for the l2switch is";
-//		node_l2switch.Get(i)->nodeId_FatTree.Print(std::cout);
-//	}
-//	for (int i = 0; i < (Port_num * Port_num / 4); i++) {
-//		std::cout << "the ID for the l0switch is";
-//		node_l0switch.Get(i)->nodeId_FatTree.Print(std::cout);
-//	}
 	Ipv4GlobalRoutingHelper::PopulateRoutingTables();
 
 	uint16_t dst_port;
 	dst_port = 20;
 
-//	Config::Set("/NodeList/171/DeviceList/5/TxQueue/TraceDrop",
-//			UintegerValue(1));
-//	Config::Set("/NodeList/167/DeviceList/5/TxQueue/TraceDrop",
-//			UintegerValue(1));
-	/*	Config::Set("/NodeList/129/DeviceList/2/TxQueue/TraceDrop",
-	 UintegerValue(1));*/// by Chunzhi
-//	Config::Set("/NodeList/129/DeviceList/2/TxQueue/TraceDrop",
-//			UintegerValue(1));
 	NodeContainer switchAll;
 	switchAll.Add(node_l2switch);
 	switchAll.Add(node_l1switch);
 	switchAll.Add(node_l0switch);
-
-//---------------------------------Bulk and Sink Application-------------------------------//
 
 //	p2p.EnablePcap("server tracing 35", node_server.Get(35)->GetDevice(1),
 //			true);
@@ -401,52 +375,20 @@ int main(int argc, char *argv[]) {
 //			true);
 //	p2p.EnablePcap("server tracing 21", node_server.Get(21)->GetDevice(1),
 //			true);
+
+//---------------------------------Flows: BulkSend and Sink Application-------------------------------//
+
 	ApplicationContainer srcApps;
 	ApplicationContainer sinkApps;
 
-	// Add flows
-
-//	flows.push_back(make_pair("000", make_pair("001", dst_port)));
-//	flows.push_back(make_pair("000", make_pair("010", dst_port)));
-//	flows.push_back(make_pair("000", make_pair("101", dst_port)));
-//	flows.push_back(make_pair("203", make_pair("011", dst_port)));
-//	flows.push_back(make_pair("102", make_pair("011", dst_port + 1)));
-//	flows.push_back(make_pair("110", make_pair("701", dst_port)));
-//	flows.push_back(make_pair("220", make_pair("610", dst_port)));
-
-	// server_label -> turning_switch_label
-	// Note that the adding order is important, i.e. the first matching pair is used.
-//	server_turning_pairs.push_back(std::make_pair("001", "00x"));
-//	server_turning_pairs.push_back(std::make_pair("010", "001"));
-//	server_turning_pairs.push_back(std::make_pair("101", "00x"));
-
-//	server_turning_pairs.push_back(std::make_pair("102", "00x"));
-//	server_turning_pairs.push_back(std::make_pair("110", "31x"));
-//	server_turning_pairs.push_back(std::make_pair("220", "32x"));
-//	server_turning_pairs.push_back(std::make_pair("011", "00x"));
-//	server_turning_pairs.push_back(std::make_pair("111", "31x"));
-
+	// Add flow path
 //	addFlow("000", "001", dst_port, "00x");
 //	addFlow("000", "010", dst_port, "001");
-	addFlow("000", "101", dst_port, "000"); // 6-hop flow goes through failure link
+	addFlow("000", "101", dst_port, "000"); // 6-hop flow goes through the failure link
 
 	addFlow("200", "300", dst_port, "300"); // 6-hop flow goes through no failure link.
 
-//	map<string, Ptr<PacketSink> > flow_sink_map;
-
-//	for (uint i = 0; i < flows.size(); i++) {
-//		std::string src_label = flows[i].first;
-//		std::string dst_label = flows[i].second.first;
-//		uint port = flows[i].second.second;
-//		srcApps.Add(
-//				newBulkSendApp(node_server.Get(serverLabel_id_map[src_label]),
-//						node_server.Get(serverLabel_id_map[dst_label]), port));
-//		Ptr<PacketSink> sink = newPacketSinkApp(
-//				node_server.Get(serverLabel_id_map[dst_label]), port);
-//		sinkApps.Add(sink);
-//		flow_sink_map[src_label + "->" + dst_label] = sink;
-//	}
-
+	// add Source&Sink Apps (Traffic Generator&Receiver) for each flow
 	for (uint i = 0; i < flows.size(); i++) {
 		Flow* flow = &flows[i];
 		std::string src_label = flow->srcLabel;
@@ -463,15 +405,7 @@ int main(int argc, char *argv[]) {
 		sinkApps.Add(flow->sinkApp);
 	}
 
-//	sinkApps.Add(
-//			newPacketSinkApp(node_server.Get(serverLabel_id_map["012"]),
-//					dst_port));
-//	sinkApps.Add(
-//			newPacketSinkApp(node_server.Get(serverLabel_id_map["302"]),
-//					dst_port + 5));
-
 	srcApps.Start(Seconds(startTimeFatTree));
-//	srcApps.Start(Seconds(failTimeFatTree));
 	srcApps.Stop(Seconds(stopTimeFatTree));
 
 	sinkApps.Start(Seconds(startTimeFatTree));
@@ -481,14 +415,16 @@ int main(int argc, char *argv[]) {
 	// set failure
 //	double failTimeFatTree = collectTime + (stopTimeFatTree - collectTime) / 2;
 	double failTimeFatTree = collectTime;
+	Simulator::Schedule(Seconds(failTimeFatTree), setFailure);
+
 	std::cout << "collectTime=" << collectTime << "; failureTime="
 			<< failTimeFatTree << "; stopTime=" << stopTimeFatTree << "; isLRD="
 			<< isLRD << std::endl;
-	Simulator::Schedule(Seconds(failTimeFatTree), setFailure);
 	Simulator::Stop(Seconds(stopTimeFatTree + 0.01));
 	Simulator::Run();
 	Simulator::Destroy();
 
+	// print results
 	for (uint i = 0; i < flows.size(); i++) {
 //		string flowId = flows[i].first + "->" + flows[i].second.first;
 //		showSinkResult(flowId, flow_sink_map[flowId]);

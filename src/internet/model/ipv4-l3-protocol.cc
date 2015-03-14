@@ -699,9 +699,13 @@ void Ipv4L3Protocol::SendRealOut(Ptr<Ipv4Route> route, Ptr<Packet> packet,
 
 		std::string srcLabel = nodeId_src.toString();
 		std::string dstLabel = nodeId_dst.toString();
+
+		// data or ack flowId
 		std::string flowId = srcLabel + "->" + dstLabel + ":" + i2s(dst_port);
 		std::string flowId_reverse = dstLabel + "->" + srcLabel + ":"
 				+ i2s(src_port);
+
+		// Find turning switch for the packet.
 		if (flow_turning_map.find(flowId) != flow_turning_map.end()) {
 			turning_switch_label = flow_turning_map.at(flowId);
 		} else if (flow_turning_map.find(flowId_reverse)

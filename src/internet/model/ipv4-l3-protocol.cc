@@ -40,10 +40,20 @@
 #include "ipv4-interface.h"
 #include "ipv4-raw-socket-impl.h"
 #include <cassert>
+#include "tcp-header.h"
 
 NS_LOG_COMPONENT_DEFINE("Ipv4L3Protocol");
 
 std::vector<std::pair<std::string, std::string> > server_turning_pairs;
+std::map<std::string, std::string> flow_turning_map;
+
+std::string i2s(uint i) {
+	std::string s;
+	std::stringstream out;
+	out << i;
+	s = out.str();
+	return s;
+}
 
 namespace ns3 {
 
@@ -644,6 +654,11 @@ void Ipv4L3Protocol::SendRealOut(Ptr<Ipv4Route> route, Ptr<Packet> packet,
 		return;
 	}
 
+	/*--------------------------Chunzhi------------------------*/
+	TcpHeader tcpHeader;
+	packet->PeekHeader(tcpHeader);
+	/*-------------------------------------------------------------*/
+
 	packet->AddHeader(ipHeader);
 	Ptr<NetDevice> outDev = route->GetOutputDevice();
 	int32_t interface = GetInterfaceForDevice(outDev);
@@ -657,6 +672,8 @@ void Ipv4L3Protocol::SendRealOut(Ptr<Ipv4Route> route, Ptr<Packet> packet,
 	if (nodeIsServer) {    // add Tag for sender only
 		Ipv4Address dstIp = ipHeader.GetDestination();
 		Ipv4Address srcIp = ipHeader.GetSource();
+		uint dst_port = tcpHeader.GetDestinationPort();
+		uint src_port = tcpHeader.GetSourcePort();
 		//std::cout << srcIp << "->" << dstIp << std::endl;
 		NodeId nodeId_dst = IpServerMap[dstIp]->nodeId_FatTree;
 		NodeId nodeId_src = IpServerMap[srcIp]->nodeId_FatTree;
@@ -680,18 +697,30 @@ void Ipv4L3Protocol::SendRealOut(Ptr<Ipv4Route> route, Ptr<Packet> packet,
 
 		std::string turning_switch_label = "xxx"; // default init value;
 
-		// Find turning switch for the given nodeId_src/nodeId_dst
-		for (uint i = 0; i < server_turning_pairs.size(); i++) {
-			std::string server_label = server_turning_pairs[i].first;
-
-			// Set the turning SWID, if the packet is from OR to the "server_label".
-			// i.e. the data flow and ACK flow use the same turning switch.
-			if (server_label == nodeId_src.toString()
-					|| server_label == nodeId_dst.toString()) {
-				turning_switch_label = server_turning_pairs[i].second;
-				break;
-			}
+		std::string srcLabel = nodeId_src.toString();
+		std::string dstLabel = nodeId_dst.toString();
+		std::string flowId = srcLabel + "->" + dstLabel + ":" + i2s(dst_port);
+		std::string flowId_reverse = dstLabel + "->" + srcLabel + ":"
+				+ i2s(src_port);
+		if (flow_turning_map.find(flowId) != flow_turning_map.end()) {
+			turning_switch_label = flow_turning_map.at(flowId);
+		} else if (flow_turning_map.find(flowId_reverse)
+				!= flow_turning_map.end()) {
+			turning_switch_label = flow_turning_map.at(flowId_reverse);
 		}
+
+		// Find turning switch for the given nodeId_src/nodeId_dst
+//		for (uint i = 0; i < server_turning_pairs.size(); i++) {
+//			std::string server_label = server_turning_pairs[i].first;
+//
+//			// Set the turning SWID, if the packet is from OR to the "server_label".
+//			// i.e. the data flow and ACK flow use the same turning switch.
+//			if (server_label == nodeId_src.toString()
+//					|| server_label == nodeId_dst.toString()) {
+//				turning_switch_label = server_turning_pairs[i].second;
+//				break;
+//			}
+//		}
 //		std::cout << "chunzhi says turning switch=" << turning_switch_label
 //				<< std::endl;
 

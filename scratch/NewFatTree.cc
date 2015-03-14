@@ -30,6 +30,14 @@
 using namespace ns3;
 using namespace std;
 
+std::string i2s(uint i) {
+	std::string s;
+	std::stringstream out;
+	out << i;
+	s = out.str();
+	return s;
+}
+
 std::map<Ptr<Node>, Ipv4Address> ServerIpMap;
 std::map<Ipv4Address, Ptr<Node> > IpServerMap;
 
@@ -37,12 +45,15 @@ std::map<uint, std::string> id_serverLabel_map;
 std::map<std::string, uint> serverLabel_id_map;
 std::map<std::string, Ipv4Address> serverLabel_address_map;
 
+//vector<pair<string, pair<string, uint> > > flows; // TCP data flows
+
 std::vector<std::pair<std::string, std::string> > server_turning_pairs; // serverLabel-> turningSwitchLabel
+std::map<std::string, std::string> flow_turning_map; // flow->turningSwitchLabel
 
 bool isEfficientFatTree = false;
 
 // use the LRD algorithm for comparison.
-bool isLRD = true;
+bool isLRD = false;
 // flows experience failure for testing LRD. flowId = "dstLabel_turningLabel_failureSwitchLabel"
 std::map<std::string, uint> LRD_failureflow_oif_map;
 
@@ -53,6 +64,52 @@ extern uint32_t selectedNode;
 extern double collectTime;
 //extern double failTimeFatTree;
 const uint Port_num = 8; // set the # of ports at a switch. k=8
+
+class Flow {
+public:
+	Flow(std::string srcLabel, std::string dstLabel, uint dst_port);
+	std::string getFlowId(bool isAck = false);
+	void ShowSinkResult();
+
+	Ptr<BulkSendApplication> srcApp;
+	Ptr<PacketSink> sinkApp;
+
+	std::string srcLabel, dstLabel;
+	uint dst_port;
+};
+
+Flow::Flow(std::string srcLabel, std::string dstLabel, uint dst_port) {
+	this->srcLabel = srcLabel;
+	this->dstLabel = dstLabel;
+	this->dst_port = dst_port;
+}
+
+std::string Flow::getFlowId(bool isAck) {
+	if (!isAck) { // data flow
+		return srcLabel + "->" + dstLabel + ":" + i2s(dst_port);
+	} else { // ack flow
+		return dstLabel + ":" + i2s(dst_port) + "->" + srcLabel;
+	}
+}
+
+void Flow::ShowSinkResult() {
+	Ptr<PacketSink> sink = this->sinkApp;
+	std::cout << "-----------flow id = " << this->getFlowId() << "------------"
+			<< std::endl;
+//	std::cout << "sinkApp = " << sink << "; sourceApp=" << this->srcApp
+//			<< std::endl;
+	std::cout << "total size : " << sink->GetTotalRx() << std::endl;
+	std::cout << "total number of packets : " << sink->packetN << std::endl;
+	std::cout << "total delay is : " << sink->totalDelay << std::endl;
+	std::cout << "average delay is : " << sink->totalDelay / sink->packetN
+			<< std::endl;
+	std::cout << "Goodput is : "
+			<< (sink->GetTotalRx()
+					/ (stopTimeFatTree - startTimeFatTree - collectTime)) * 8.0
+					/ 1000.0 << " kbps" << std::endl << std::endl;
+}
+
+vector<Flow> flows;
 
 void setFailure(void) {
 	// link 001:1 <-> 002:5
@@ -68,14 +125,6 @@ void clearFailure(NodeContainer switchAll) {
 }
 NS_LOG_COMPONENT_DEFINE("first");
 
-std::string i2s(uint i) {
-	std::string s;
-	std::stringstream out;
-	out << i;
-	s = out.str();
-	return s;
-}
-
 Ptr<BulkSendApplication> newBulkSendApp(Ptr<Node> srcNode, Ptr<Node> dstNode,
 		uint dstPort, uint maxBytes = 0) {
 	BulkSendHelper source("ns3::TcpSocketFactory",
@@ -88,6 +137,21 @@ Ptr<PacketSink> newPacketSinkApp(Ptr<Node> dstNode, uint dstPort) {
 	PacketSinkHelper sink = PacketSinkHelper("ns3::TcpSocketFactory",
 			InetSocketAddress(Ipv4Address().GetAny(), dstPort));
 	return DynamicCast<PacketSink>(sink.Install(dstNode).Get(0));
+}
+
+void addFlow(std::string srcLabel, std::string dstLabel, uint dst_port,
+		std::string turningSwitchLabel) {
+	Flow flow(srcLabel, dstLabel, dst_port);
+	string dataFlowId = flow.getFlowId();
+	string ackFlowId = flow.getFlowId(true);
+
+	if (flow_turning_map.find(dataFlowId) != flow_turning_map.end()) {
+		std::cout << "Duplicate flow: " << dataFlowId << std::endl;
+		assert(false);
+	}
+	flows.push_back(flow);
+	flow_turning_map[dataFlowId] = turningSwitchLabel; // data flow -> turning switch label
+	flow_turning_map[ackFlowId] = turningSwitchLabel; // ack flow -> turning switch label
 }
 
 void showSinkResult(string flowId, Ptr<PacketSink> sink) {
@@ -107,16 +171,12 @@ void showSinkResult(string flowId, Ptr<PacketSink> sink) {
 int main(int argc, char *argv[]) {
 	/*-------------------parameter setting----------------------*/
 	startTimeFatTree = 0.0;
-	stopTimeFatTree = 5.0;
-	collectTime = 0.0;
-	selectedNode = 129; //Id 167 is the aggregate switch for flow(18->5) and flow(20->113)
-						//Id 171 is the aggregate switch for flow(35->5) and flow(40->100)
-						//Id 129 is the edge switch for flow(18->5) and flow(35->5)
+	stopTimeFatTree = 40.0;
+	collectTime = 10.0;
+//	selectedNode = 129; //Id 167 is the aggregate switch for flow(18->5) and flow(20->113)
+	//Id 171 is the aggregate switch for flow(35->5) and flow(40->100)
+	//Id 129 is the edge switch for flow(18->5) and flow(35->5)
 
-	// set failure
-//	double failTimeFatTree = collectTime + (stopTimeFatTree - collectTime) / 2;
-	double failTimeFatTree = startTimeFatTree;
-	Simulator::Schedule(Seconds(failTimeFatTree), setFailure);
 //	Simulator::Schedule(Seconds(10.0), clearFailure, switchAll);
 //	Simulator::Schedule(Seconds(50.0), setFailure);
 
@@ -136,7 +196,7 @@ int main(int argc, char *argv[]) {
 //			EnumValue(ns3::Queue::QUEUE_MODE_PACKETS));
 
 	// output-queued switch buffer size (max bytes of each fifo queue)
-	Config::SetDefault("ns3::DropTailQueue::MaxBytes", UintegerValue(15000));
+	Config::SetDefault("ns3::DropTailQueue::MaxBytes", UintegerValue(20000));
 //	Config::SetDefault("ns3::DropTailQueue::MaxPackets", UintegerValue(25));
 //	Config::SetDefault("ns3::RedQueue::Mode",
 //			EnumValue(ns3::Queue::QUEUE_MODE_BYTES));
@@ -147,8 +207,11 @@ int main(int argc, char *argv[]) {
 //	Config::SetDefault("ns3::RedQueue::QueueLimit", UintegerValue(15000));
 	/*-------------------------------------------------------------------------*/
 	CommandLine cmd;
-	bool enableMonitor = true;
+	bool enableMonitor = false;
 	cmd.AddValue("EnableMonitor", "Enable Flow Monitor", enableMonitor);
+	cmd.AddValue("LRD", "Use LRD algorithm for rerouting", isLRD);
+	cmd.AddValue("collectTime", "Time to start collecting", collectTime);
+	cmd.AddValue("stopTime", "Time to stop simulation", stopTimeFatTree);
 
 	cmd.Parse(argc, argv);
 
@@ -175,7 +238,7 @@ int main(int argc, char *argv[]) {
 	internet.Install(node_l0switch);
 	// Point to Point Helper to all the links in fat-tree include the server subnets
 	PointToPointHelper p2p;
-	p2p.SetDeviceAttribute("DataRate", StringValue("5Mbps"));
+	p2p.SetDeviceAttribute("DataRate", StringValue("10Mbps"));
 	p2p.SetChannelAttribute("Delay", StringValue("1ms"));
 //	p2p.SetQueue(
 //			"ns3::RedQueue");
@@ -325,87 +388,6 @@ int main(int argc, char *argv[]) {
 	switchAll.Add(node_l0switch);
 
 //---------------------------------Bulk and Sink Application-------------------------------//
-	/*BulkSendHelper sourceTarget("ns3::TcpSocketFactory",
-	 (InetSocketAddress(serverLabel_address_map["011"], dst_port))); // Node(5), NodeTag("011")
-	 BulkSendHelper source1("ns3::TcpSocketFactory",
-	 (InetSocketAddress(serverLabel_address_map["011"], dst_port + 1)));
-	 //	BulkSendHelper source2("ns3::TcpSocketFactory",
-	 //			(InetSocketAddress(serverTag_address_map["012"], port))); // Node(6), NodeTag("012")
-	 BulkSendHelper source3("ns3::TcpSocketFactory",
-	 (InetSocketAddress(serverLabel_address_map["701"], dst_port))); // Node(113), NodeTag("701")
-	 BulkSendHelper source4("ns3::TcpSocketFactory",
-	 (InetSocketAddress(serverLabel_address_map["610"], dst_port))); //Node(100), NodeTag("610")
-	 //	BulkSendHelper source5("ns3::TcpSocketFactory",
-	 //			(InetSocketAddress(serverTag_address_map["302"], port + 5))); // Node(50), NodeTag("302")
-
-	 sourceTarget.SetAttribute("MaxBytes", UintegerValue(0));
-	 source1.SetAttribute("MaxBytes", UintegerValue(0));
-	 source3.SetAttribute("MaxBytes", UintegerValue(0));
-	 source4.SetAttribute("MaxBytes", UintegerValue(0));*/
-
-//	ApplicationContainer sourceAppsTarget = sourceTarget.Install(
-//			node_server.Get(serverLabel_id_map["203"])); // "203" -> "011"
-	/*Ptr<BulkSendApplication> src1 = newBulkSendApp(
-	 node_server.Get(serverLabel_id_map["203"]),
-	 node_server.Get(serverLabel_id_map["011"]), dst_port);
-	 src1->SetStartTime(Seconds(startTimeFatTree));
-	 src1->SetStopTime(Seconds(stopTimeFatTree));
-	 ApplicationContainer sourceApps1 = source1.Install(
-	 node_server.Get(serverLabel_id_map["102"])); // "102" -> "011"
-	 sourceApps1.Start(Seconds(startTimeFatTree));
-	 sourceApps1.Stop(Seconds(stopTimeFatTree));
-
-	 ApplicationContainer sourceApps3 = source3.Install(
-	 node_server.Get(serverLabel_id_map["110"])); // "110" -> "701"
-	 sourceApps3.Start(Seconds(startTimeFatTree));
-	 sourceApps3.Stop(Seconds(stopTimeFatTree));
-	 ApplicationContainer sourceApps4 = source4.Install(
-	 node_server.Get(serverLabel_id_map["220"])); // "220" -> "610"
-	 sourceApps4.Start(Seconds(startTimeFatTree));
-	 sourceApps4.Stop(Seconds(stopTimeFatTree));*/
-
-//	sendTarget->SetAttribute("TraceCwndOutputFile", StringValue("cwnd35.txt"));
-//	send1->SetAttribute("TraceCwndOutputFile", StringValue("cwnd18.txt"));
-//	send3->SetAttribute("TraceCwndOutputFile", StringValue("cwnd20.txt"));
-//	send4->SetAttribute("TraceCwndOutputFile", StringValue("cwnd40.txt"));
-////	send5->SetAttribute("TraceCwndOutputFile", StringValue("cwnd21.txt"));
-	/*PacketSinkHelper sinkTarget("ns3::TcpSocketFactory",
-	 (InetSocketAddress(serverLabel_address_map["011"], dst_port))); // Node(5), NodeTag("011")
-	 PacketSinkHelper sink1("ns3::TcpSocketFactory",
-	 (InetSocketAddress(serverLabel_address_map["011"], dst_port + 1)));
-	 PacketSinkHelper sink2("ns3::TcpSocketFactory",
-	 (InetSocketAddress(serverLabel_address_map["012"], dst_port))); // Node(6), NodeTag("012")
-	 PacketSinkHelper sink3("ns3::TcpSocketFactory",
-	 (InetSocketAddress(serverLabel_address_map["701"], dst_port))); // Node(113), NodeTag("701")
-	 PacketSinkHelper sink4("ns3::TcpSocketFactory",
-	 (InetSocketAddress(serverLabel_address_map["610"], dst_port))); //Node(100), NodeTag("610")
-	 PacketSinkHelper sink5("ns3::TcpSocketFactory",
-	 (InetSocketAddress(serverLabel_address_map["302"], dst_port + 5))); // Node(50), NodeTag("302")
-
-	 ApplicationContainer sinkAppsTarget = sinkTarget.Install(
-	 node_server.Get(serverLabel_id_map["011"]));
-	 sinkAppsTarget.Start(Seconds(startTimeFatTree));
-	 sinkAppsTarget.Stop(Seconds(stopTimeFatTree));
-	 ApplicationContainer sinkApps1 = sink1.Install(
-	 node_server.Get(serverLabel_id_map["011"])); // NodeTag("011")
-	 sinkApps1.Start(Seconds(startTimeFatTree));
-	 sinkApps1.Stop(Seconds(stopTimeFatTree));
-	 ApplicationContainer sinkApps2 = sink2.Install(
-	 node_server.Get(serverLabel_id_map["012"])); // NodeTag("012")
-	 sinkApps2.Start(Seconds(startTimeFatTree));
-	 sinkApps2.Stop(Seconds(stopTimeFatTree));
-	 ApplicationContainer sinkApps3 = sink3.Install(
-	 node_server.Get(serverLabel_id_map["701"])); // NodeTag("701")
-	 sinkApps3.Start(Seconds(startTimeFatTree));
-	 sinkApps3.Stop(Seconds(stopTimeFatTree));
-	 ApplicationContainer sinkApps4 = sink4.Install(
-	 node_server.Get(serverLabel_id_map["610"])); // NodeTag("610")
-	 sinkApps4.Start(Seconds(startTimeFatTree));
-	 sinkApps4.Stop(Seconds(stopTimeFatTree));
-	 ApplicationContainer sinkApps5 = sink5.Install(
-	 node_server.Get(serverLabel_id_map["302"])); // NodeTag("302")
-	 sinkApps5.Start(Seconds(startTimeFatTree));
-	 sinkApps5.Stop(Seconds(stopTimeFatTree));*/
 
 //	p2p.EnablePcap("server tracing 35", node_server.Get(35)->GetDevice(1),
 //			true);
@@ -422,10 +404,11 @@ int main(int argc, char *argv[]) {
 	ApplicationContainer srcApps;
 	ApplicationContainer sinkApps;
 
-	vector<pair<string, pair<string, uint> > > flows;
-	flows.push_back(make_pair("000", make_pair("001", dst_port)));
-	flows.push_back(make_pair("000", make_pair("010", dst_port)));
-	flows.push_back(make_pair("000", make_pair("101", dst_port)));
+	// Add flows
+
+//	flows.push_back(make_pair("000", make_pair("001", dst_port)));
+//	flows.push_back(make_pair("000", make_pair("010", dst_port)));
+//	flows.push_back(make_pair("000", make_pair("101", dst_port)));
 //	flows.push_back(make_pair("203", make_pair("011", dst_port)));
 //	flows.push_back(make_pair("102", make_pair("011", dst_port + 1)));
 //	flows.push_back(make_pair("110", make_pair("701", dst_port)));
@@ -433,28 +416,51 @@ int main(int argc, char *argv[]) {
 
 	// server_label -> turning_switch_label
 	// Note that the adding order is important, i.e. the first matching pair is used.
-	server_turning_pairs.push_back(std::make_pair("001", "00x"));
-	server_turning_pairs.push_back(std::make_pair("010", "001"));
-	server_turning_pairs.push_back(std::make_pair("101", "00x"));
+//	server_turning_pairs.push_back(std::make_pair("001", "00x"));
+//	server_turning_pairs.push_back(std::make_pair("010", "001"));
+//	server_turning_pairs.push_back(std::make_pair("101", "00x"));
+
 //	server_turning_pairs.push_back(std::make_pair("102", "00x"));
 //	server_turning_pairs.push_back(std::make_pair("110", "31x"));
 //	server_turning_pairs.push_back(std::make_pair("220", "32x"));
 //	server_turning_pairs.push_back(std::make_pair("011", "00x"));
 //	server_turning_pairs.push_back(std::make_pair("111", "31x"));
 
-	map<string, Ptr<PacketSink> > flow_sink_map;
+//	addFlow("000", "001", dst_port, "00x");
+//	addFlow("000", "010", dst_port, "001");
+	addFlow("000", "101", dst_port, "000"); // 6-hop flow goes through failure link
+
+	addFlow("200", "300", dst_port, "300"); // 6-hop flow goes through no failure link.
+
+//	map<string, Ptr<PacketSink> > flow_sink_map;
+
+//	for (uint i = 0; i < flows.size(); i++) {
+//		std::string src_label = flows[i].first;
+//		std::string dst_label = flows[i].second.first;
+//		uint port = flows[i].second.second;
+//		srcApps.Add(
+//				newBulkSendApp(node_server.Get(serverLabel_id_map[src_label]),
+//						node_server.Get(serverLabel_id_map[dst_label]), port));
+//		Ptr<PacketSink> sink = newPacketSinkApp(
+//				node_server.Get(serverLabel_id_map[dst_label]), port);
+//		sinkApps.Add(sink);
+//		flow_sink_map[src_label + "->" + dst_label] = sink;
+//	}
 
 	for (uint i = 0; i < flows.size(); i++) {
-		std::string src_label = flows[i].first;
-		std::string dst_label = flows[i].second.first;
-		uint port = flows[i].second.second;
-		srcApps.Add(
-				newBulkSendApp(node_server.Get(serverLabel_id_map[src_label]),
-						node_server.Get(serverLabel_id_map[dst_label]), port));
-		Ptr<PacketSink> sink = newPacketSinkApp(
+		Flow* flow = &flows[i];
+		std::string src_label = flow->srcLabel;
+		std::string dst_label = flow->dstLabel;
+		uint port = flow->dst_port;
+
+		flow->srcApp = newBulkSendApp(
+				node_server.Get(serverLabel_id_map[src_label]),
 				node_server.Get(serverLabel_id_map[dst_label]), port);
-		sinkApps.Add(sink);
-		flow_sink_map[src_label + "->" + dst_label] = sink;
+		flow->sinkApp = newPacketSinkApp(
+				node_server.Get(serverLabel_id_map[dst_label]), port);
+
+		srcApps.Add(flow->srcApp);
+		sinkApps.Add(flow->sinkApp);
 	}
 
 //	sinkApps.Add(
@@ -472,37 +478,21 @@ int main(int argc, char *argv[]) {
 	sinkApps.Stop(Seconds(stopTimeFatTree));
 
 //----------------------------------Simulation result-----------------------------------------------//
+	// set failure
+//	double failTimeFatTree = collectTime + (stopTimeFatTree - collectTime) / 2;
+	double failTimeFatTree = collectTime;
+	std::cout << "collectTime=" << collectTime << "; failureTime="
+			<< failTimeFatTree << "; stopTime=" << stopTimeFatTree << "; isLRD="
+			<< isLRD << std::endl;
+	Simulator::Schedule(Seconds(failTimeFatTree), setFailure);
 	Simulator::Stop(Seconds(stopTimeFatTree + 0.01));
 	Simulator::Run();
 	Simulator::Destroy();
-//	Ptr<PacketSink> sinkStatisticTarget = DynamicCast<PacketSink>(
-//			sinkApps.Get(0));
-//	Ptr<PacketSink> sinkStatisticCompare1 = DynamicCast<PacketSink>(
-//			sinkApps.Get(1));
-//	Ptr<PacketSink> sinkStatisticCompare2 = DynamicCast<PacketSink>(
-//			sinkApps.Get(4));
-//	Ptr<PacketSink> sinkStatisticCompare3 = DynamicCast<PacketSink>(
-//			sinkApps.Get(2));
-//	Ptr<PacketSink> sinkStatisticCompare4 = DynamicCast<PacketSink>(
-//			sinkApps.Get(3));
-//	Ptr<PacketSink> sinkStatisticCompare5 = DynamicCast<PacketSink>(
-//			sinkApps.Get(5));
 
-	/*PacketSink* sinkStatisticTarget =
-	 dynamic_cast<PacketSink*>(&(*sinkAppsTarget.Get(0)));
-	 PacketSink* sinkStatisticCompare1 =
-	 dynamic_cast<PacketSink*>(&(*sinkApps1.Get(0)));
-	 PacketSink* sinkStatisticCompare2 =
-	 dynamic_cast<PacketSink*>(&(*sinkApps2.Get(0)));
-	 PacketSink* sinkStatisticCompare3 =
-	 dynamic_cast<PacketSink*>(&(*sinkApps3.Get(0)));
-	 PacketSink* sinkStatisticCompare4 =
-	 dynamic_cast<PacketSink*>(&(*sinkApps4.Get(0)));
-	 PacketSink* sinkStatisticCompare5 =
-	 dynamic_cast<PacketSink*>(&(*sinkApps5.Get(0)));*/
 	for (uint i = 0; i < flows.size(); i++) {
-		string flowId = flows[i].first + "->" + flows[i].second.first;
-		showSinkResult(flowId, flow_sink_map[flowId]);
+//		string flowId = flows[i].first + "->" + flows[i].second.first;
+//		showSinkResult(flowId, flow_sink_map[flowId]);
+		flows[i].ShowSinkResult();
 
 //		std::cout << "the target one(35->5): --------------------------------"
 //				<< std::endl;
